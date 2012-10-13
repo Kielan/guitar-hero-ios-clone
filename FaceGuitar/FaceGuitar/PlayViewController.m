@@ -364,7 +364,12 @@ static ImagesManager *imagesManager;
 }
 
 - (void)updateHitCount {
-    hit.text = [NSString stringWithFormat:@"%d", [hit.text intValue]+1];
+    int value = [hit.text intValue];
+    value++;
+    if (value%3 == 0) {
+        [self addFriend:nil];
+    }
+    hit.text = [NSString stringWithFormat:@"%d", value];
 }
 
 - (void)updateMissCount:(NSNotification*)notification {
