@@ -20,5 +20,6 @@
 @property (nonatomic, strong) UIImage *hitText;
 @property (nonatomic, strong) UIImage *goodText;
 @property (nonatomic, strong) UIImage *greatText;
+@property (nonatomic, strong) UIImage *missText;
 
 @end

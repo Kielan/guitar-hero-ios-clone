@@ -84,13 +84,6 @@ static ImagesManager *imagesManager;
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:nil];
     [audioPlayer prepareToPlay];
 
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f
-                                                   target:self
-                                                 selector:@selector(updateColumns)
-                                                 userInfo:nil
-                                                  repeats:YES];
-    [updateTimer fire];
-    [audioPlayer play];
     // Do any additional setup after loading the view from its nib.
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -98,15 +91,72 @@ static ImagesManager *imagesManager;
                                                  name:@"hit"
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(updateMissCount)
+                                             selector:@selector(updateMissCount:)
                                                  name:@"miss"
                                                object:nil];
+    [self startGame];
 }
 
-- (void)showHitTextAtLocation:(CGPoint)pt {
-    int random = arc4random()%3;
+- (void)startGame {
+    UIImageView *num1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"num-1@2x.png"]];
+    UIImageView *num2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"num-2@2x.png"]];
+    UIImageView *num3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"num-3@2x.png"]];
+    CGPoint center = CGPointMake(512, 384);
+    CGFloat scale = 1.5f;
+    num1.center = center;
+    num2.center = center;
+    num3.center = center;
+    [self.view addSubview:num3];
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         num3.transform = CGAffineTransformMakeScale(scale, scale);
+                         num3.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         [num3 removeFromSuperview];
+                         if (finished) {
+                             [self.view addSubview:num2];
+                             [UIView animateWithDuration:0.5
+                                                   delay:0.0
+                                                 options:UIViewAnimationOptionCurveEaseInOut
+                                              animations:^{
+                                                  num2.transform = CGAffineTransformMakeScale(scale, scale);
+                                                  num2.alpha = 0.0;
+                                              }
+                                              completion:^(BOOL finished){
+                                                  if (finished) {
+                                                      [self.view addSubview:num1];
+                                                      [UIView animateWithDuration:0.7
+                                                                            delay:0.0
+                                                                          options:UIViewAnimationOptionCurveEaseOut
+                                                                       animations:^{
+                                                                           num1.transform = CGAffineTransformMakeScale(scale, scale);
+                                                                           num1.alpha = 0.0;
+                                                                       }
+                                                                       completion:^(BOOL finished){
+                                                                           if (finished) {
+                                                                               [num1 removeFromSuperview];
+                                                                               updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f
+                                                                                                                              target:self
+                                                                                                                            selector:@selector(updateColumns)
+                                                                                                                            userInfo:nil
+                                                                                                                             repeats:YES];
+                                                                               [updateTimer fire];
+                                                                               [audioPlayer play];
+                                                                           }
+                                                                       }];
+                                                  }
+                                              }];
+                         }
+                     }];
+
+}
+
+- (void)showHitTextAtLocation:(CGPoint)pt andType:(int)type {
     UIImage *hitImage;
-    switch (random) {
+    switch (type) {
         case 0:
             hitImage = imagesManager.hitText;
             break;
@@ -115,6 +165,9 @@ static ImagesManager *imagesManager;
             break;
         case 2:
             hitImage = imagesManager.greatText;
+            break;
+        case 3:
+            hitImage = imagesManager.missText;
             break;
         default:
             break;
@@ -146,7 +199,7 @@ static ImagesManager *imagesManager;
                 col1.currHitDot.state = kHit;
                 col1.active = NO;
                 [self updateHitCount];
-                [self showHitTextAtLocation:CGPointMake(col1.center.x, col1.frame.origin.y + 500)];
+                [self showHitTextAtLocation:CGPointMake(col1.center.x, col1.frame.origin.y + 500) andType:(arc4random()%3)];
                 [UIView animateWithDuration:0.35
                                       delay:0.0
                                     options:UIViewAnimationOptionCurveLinear
@@ -157,7 +210,7 @@ static ImagesManager *imagesManager;
                                  completion:^(BOOL finished){
                                  }];
             } else {
-                [self updateMissCount];
+                [self updateMissCount:nil];
             }
             break;
         case 2:
@@ -165,7 +218,8 @@ static ImagesManager *imagesManager;
                 col2.currHitDot.state = kHit;
                 col2.active = NO;
                 [self updateHitCount];
-                [self showHitTextAtLocation:CGPointMake(col2.center.x, col2.frame.origin.y + 500)];
+                [self showHitTextAtLocation:CGPointMake(col2.center.x, col2.frame.origin.y + 500)
+                 andType:(arc4random()%3)];
                 [UIView animateWithDuration:0.35
                                       delay:0.0
                                     options:UIViewAnimationOptionCurveLinear
@@ -176,7 +230,7 @@ static ImagesManager *imagesManager;
                                  completion:^(BOOL finished){
                                  }];
             } else {
-                [self updateMissCount];
+                [self updateMissCount:nil];
             }
             break;
         case 3:
@@ -184,7 +238,8 @@ static ImagesManager *imagesManager;
                 col3.currHitDot.state = kHit;
                 col3.active = NO;
                 [self updateHitCount];
-                [self showHitTextAtLocation:CGPointMake(col3.center.x, col3.frame.origin.y + 500)];
+                [self showHitTextAtLocation:CGPointMake(col3.center.x, col3.frame.origin.y + 500)
+                 andType:(arc4random()%3)];
                 [UIView animateWithDuration:0.35
                                       delay:0.0
                                     options:UIViewAnimationOptionCurveLinear
@@ -195,7 +250,7 @@ static ImagesManager *imagesManager;
                                  completion:^(BOOL finished){
                                  }];
             } else {
-                [self updateMissCount];
+                [self updateMissCount:nil];
             }
             break;
         case 4:
@@ -203,7 +258,8 @@ static ImagesManager *imagesManager;
                 col4.currHitDot.state = kHit;
                 col4.active = NO;
                 [self updateHitCount];
-                [self showHitTextAtLocation:CGPointMake(col4.center.x, col4.frame.origin.y + 500)];
+                [self showHitTextAtLocation:CGPointMake(col4.center.x, col4.frame.origin.y + 500)
+                 andType:(arc4random()%3)];
                 [UIView animateWithDuration:0.35
                                       delay:0.0
                                     options:UIViewAnimationOptionCurveLinear
@@ -214,7 +270,7 @@ static ImagesManager *imagesManager;
                                  completion:^(BOOL finished){
                                  }];
             } else {
-                [self updateMissCount];
+                [self updateMissCount:nil];
             }
             break;
             
@@ -232,7 +288,12 @@ static ImagesManager *imagesManager;
     hit.text = [NSString stringWithFormat:@"%d", [hit.text intValue]+1];
 }
 
-- (void)updateMissCount {
+- (void)updateMissCount:(NSNotification*)notification {
+    if (notification) {
+        NSValue *value = [notification object];
+        CGPoint pt = [value CGPointValue];
+        [self showHitTextAtLocation:pt andType:3];
+    }
     miss.text = [NSString stringWithFormat:@"%d", [miss.text intValue]+1];
 }
 

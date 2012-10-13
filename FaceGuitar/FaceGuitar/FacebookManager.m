@@ -18,6 +18,8 @@
 @end
 @implementation FacebookManager
 @synthesize session;
+@synthesize friendsArray;
+
 static FacebookManager *sharedInstance = nil;
 
 // Get the shared instance and create it if necessary.

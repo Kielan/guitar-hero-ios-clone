@@ -13,6 +13,7 @@
     FBSession *session;
 }
 @property FBSession *session;
+@property (nonatomic, strong) NSMutableArray *friendsArray;
 
 + (FacebookManager*)sharedInstance;
 - (BOOL)isOpen;

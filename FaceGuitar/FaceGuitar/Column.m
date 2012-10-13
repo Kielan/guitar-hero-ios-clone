@@ -45,7 +45,8 @@ static ImagesManager *imagesManager;
             if (dot.state == kInZone) {
                 // this dot was missed!
                 self.active = NO;
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"miss" object:nil];
+                NSValue *value = [NSValue valueWithCGPoint:CGPointMake(self.center.x, 700)];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"miss" object:value];
                 dot.image = imagesManager.grayDot;
                 dot.state = kMiss;
             }
