@@ -137,25 +137,25 @@ int demo[88][4] = { { 1, 0, 0, 0 },
     col1 = [[Column alloc] init];
     col1.frame = CGRectMake(0, 0, 120, 600);
     col1.center = CGPointMake(204, 420);
-    col1.backgroundColor = [UIColor whiteColor];
+    col1.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     [self.view addSubview:col1];
     
     col2 = [[Column alloc] init];
     col2.frame = CGRectMake(0, 0, 120, 600);
     col2.center = CGPointMake(410, 420);
-    col2.backgroundColor = [UIColor whiteColor];
+    col2.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     [self.view addSubview:col2];
     
     col3 = [[Column alloc] init];
     col3.frame = CGRectMake(0, 0, 120, 600);
     col3.center = CGPointMake(614, 420);
-    col3.backgroundColor = [UIColor whiteColor];
+    col3.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     [self.view addSubview:col3];
     
     col4 = [[Column alloc] init];
     col4.frame = CGRectMake(0, 0, 120, 600);
     col4.center = CGPointMake(820, 420);
-    col4.backgroundColor = [UIColor whiteColor];
+    col4.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     [self.view addSubview:col4];
     
     NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"gangnam" ofType:@"mp3"]];

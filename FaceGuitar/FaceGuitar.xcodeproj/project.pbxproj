@@ -22,6 +22,11 @@
 		6DA47EAF162903D800C9F127 /* Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EAE162903D800C9F127 /* Column.m */; };
 		6DA47EB81629166300C9F127 /* Dot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EB71629166300C9F127 /* Dot.m */; };
 		6DA47EBB16291C8200C9F127 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EBA16291C8200C9F127 /* FacebookManager.m */; };
+		6DA47EE516297A1E00C9F127 /* play-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EE416297A1E00C9F127 /* play-background@2x.png */; };
+		6DA47EEB16297E5400C9F127 /* blue-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EE716297E5400C9F127 /* blue-dot@2x.png */; };
+		6DA47EEC16297E5400C9F127 /* green-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EE816297E5400C9F127 /* green-dot@2x.png */; };
+		6DA47EED16297E5400C9F127 /* red-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EE916297E5400C9F127 /* red-dot@2x.png */; };
+		6DA47EEE16297E5400C9F127 /* yellow-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EEA16297E5400C9F127 /* yellow-dot@2x.png */; };
 		BE164FFD1629703B008A5BCD /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF41629703B008A5BCD /* background@2x.png */; };
 		BE164FFE1629703B008A5BCD /* button-chord-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF51629703B008A5BCD /* button-chord-off@2x.png */; };
 		BE164FFF1629703B008A5BCD /* button-chord-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF61629703B008A5BCD /* button-chord-on@2x.png */; };
@@ -68,6 +73,11 @@
 		6DA47EB71629166300C9F127 /* Dot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dot.m; sourceTree = "<group>"; };
 		6DA47EB916291C8100C9F127 /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
 		6DA47EBA16291C8200C9F127 /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
+		6DA47EE416297A1E00C9F127 /* play-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-background@2x.png"; path = "images/play-background@2x.png"; sourceTree = "<group>"; };
+		6DA47EE716297E5400C9F127 /* blue-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blue-dot@2x.png"; path = "images/blue-dot@2x.png"; sourceTree = "<group>"; };
+		6DA47EE816297E5400C9F127 /* green-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-dot@2x.png"; path = "images/green-dot@2x.png"; sourceTree = "<group>"; };
+		6DA47EE916297E5400C9F127 /* red-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "red-dot@2x.png"; path = "images/red-dot@2x.png"; sourceTree = "<group>"; };
+		6DA47EEA16297E5400C9F127 /* yellow-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yellow-dot@2x.png"; path = "images/yellow-dot@2x.png"; sourceTree = "<group>"; };
 		BE164FF41629703B008A5BCD /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "images/background@2x.png"; sourceTree = "<group>"; };
 		BE164FF51629703B008A5BCD /* button-chord-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-off@2x.png"; path = "images/button-chord-off@2x.png"; sourceTree = "<group>"; };
 		BE164FF61629703B008A5BCD /* button-chord-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-on@2x.png"; path = "images/button-chord-on@2x.png"; sourceTree = "<group>"; };
@@ -187,6 +197,10 @@
 			isa = PBXGroup;
 			children = (
 				BE164FF41629703B008A5BCD /* background@2x.png */,
+				6DA47EE716297E5400C9F127 /* blue-dot@2x.png */,
+				6DA47EE816297E5400C9F127 /* green-dot@2x.png */,
+				6DA47EE916297E5400C9F127 /* red-dot@2x.png */,
+				6DA47EEA16297E5400C9F127 /* yellow-dot@2x.png */,
 				BE164FF51629703B008A5BCD /* button-chord-off@2x.png */,
 				BE164FF61629703B008A5BCD /* button-chord-on@2x.png */,
 				BE164FF71629703B008A5BCD /* button-host@2x.png */,
@@ -194,6 +208,7 @@
 				BE164FF91629703B008A5BCD /* button-strum-on@2x.png */,
 				BE164FFA1629703B008A5BCD /* guitarguy-off@2x.png */,
 				BE164FFB1629703B008A5BCD /* guitarguy-on@2x.png */,
+				6DA47EE416297A1E00C9F127 /* play-background@2x.png */,
 				BE164FFC1629703B008A5BCD /* logo@2x.png */,
 				BE8E8A89162966740004EEE2 /* gangnam.mp3 */,
 			);
@@ -266,6 +281,11 @@
 				BE1650031629703B008A5BCD /* guitarguy-off@2x.png in Resources */,
 				BE1650041629703B008A5BCD /* guitarguy-on@2x.png in Resources */,
 				BE1650051629703B008A5BCD /* logo@2x.png in Resources */,
+				6DA47EE516297A1E00C9F127 /* play-background@2x.png in Resources */,
+				6DA47EEB16297E5400C9F127 /* blue-dot@2x.png in Resources */,
+				6DA47EEC16297E5400C9F127 /* green-dot@2x.png in Resources */,
+				6DA47EED16297E5400C9F127 /* red-dot@2x.png in Resources */,
+				6DA47EEE16297E5400C9F127 /* yellow-dot@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
