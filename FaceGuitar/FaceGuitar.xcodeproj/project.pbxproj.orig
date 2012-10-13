@@ -39,49 +39,13 @@
 		BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9427561629159F00EF55A0 /* MainMenuViewController.xib */; };
 		BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94275B1629188D00EF55A0 /* NetworkManager.m */; };
 		BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94275D162918A200EF55A0 /* GameKit.framework */; };
-		EFC0B99F162996950087B697 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFC0B99E162996950087B697 /* placeholder.gif */; };
-		EFC0B9CB16299A750087B697 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9CA16299A750087B697 /* MapKit.framework */; };
-		EFC0B9CD16299A7C0087B697 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9CC16299A7C0087B697 /* ImageIO.framework */; };
-		EFC0B9DF16299CFF0087B697 /* libSDWebImageARC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9DA16299CC20087B697 /* libSDWebImageARC.a */; };
 		EFF31F7216296DD500074395 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF31F7016296DD500074395 /* Accounts.framework */; };
 		EFF31F7316296DD500074395 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF31F7116296DD500074395 /* AdSupport.framework */; };
 		EFF31F7616296E2700074395 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF31F7516296E2700074395 /* Social.framework */; };
 		EFF31F7A16296F3D00074395 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF31F7916296F3D00074395 /* FacebookSDK.framework */; };
 		EFF31F7F16296F7A00074395 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF31F7C16296F7A00074395 /* FacebookSDKResources.bundle */; };
 		EFF31F8016296F7A00074395 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF31F7D16296F7A00074395 /* FBUserSettingsViewResources.bundle */; };
-		EFF31FAA162990C800074395 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF31FA9162990C800074395 /* Friend.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		EFC0B9D716299CC20087B697 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EFC0B9CE16299CC10087B697 /* SDWebImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 53922D6F148C55820056699D;
-			remoteInfo = SDWebImage;
-		};
-		EFC0B9D916299CC20087B697 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EFC0B9CE16299CC10087B697 /* SDWebImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 53761325155AD0D5005750A4;
-			remoteInfo = "SDWebImage ARC";
-		};
-		EFC0B9DB16299CC20087B697 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EFC0B9CE16299CC10087B697 /* SDWebImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 531041E0157EAFA400BBABC3;
-			remoteInfo = "SDWebImage ARC+MKAnnotation";
-		};
-		EFC0B9DD16299CE60087B697 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EFC0B9CE16299CC10087B697 /* SDWebImage.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 53761307155AD0D5005750A4;
-			remoteInfo = "SDWebImage ARC";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6DA47E7E1628FD4400C9F127 /* FaceGuitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceGuitar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,18 +95,12 @@
 		BE94275A1629188D00EF55A0 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		BE94275B1629188D00EF55A0 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		BE94275D162918A200EF55A0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		EFC0B99E162996950087B697 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = placeholder.gif; sourceTree = "<group>"; };
-		EFC0B9CA16299A750087B697 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		EFC0B9CC16299A7C0087B697 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		EFC0B9CE16299CC10087B697 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = SDWebImage/SDWebImage.xcodeproj; sourceTree = "<group>"; };
 		EFF31F7016296DD500074395 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		EFF31F7116296DD500074395 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EFF31F7516296E2700074395 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EFF31F7916296F3D00074395 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		EFF31F7C16296F7A00074395 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = FacebookSDK.framework/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		EFF31F7D16296F7A00074395 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = FacebookSDK.framework/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
-		EFF31FA8162990C800074395 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
-		EFF31FA9162990C800074395 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,13 +108,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC0B9DF16299CFF0087B697 /* libSDWebImageARC.a in Frameworks */,
-				EFC0B9CD16299A7C0087B697 /* ImageIO.framework in Frameworks */,
-				EFC0B9CB16299A750087B697 /* MapKit.framework in Frameworks */,
+<<<<<<< HEAD
 				EFF31F7616296E2700074395 /* Social.framework in Frameworks */,
 				EFF31F7216296DD500074395 /* Accounts.framework in Frameworks */,
 				EFF31F7316296DD500074395 /* AdSupport.framework in Frameworks */,
+=======
 				BE8E8A87162965FB0004EEE2 /* AVFoundation.framework in Frameworks */,
+>>>>>>> 4d90598205504db1eaef071668d0b50f39686453
 				BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */,
 				6DA47E831628FD4400C9F127 /* UIKit.framework in Frameworks */,
 				6DA47E851628FD4400C9F127 /* Foundation.framework in Frameworks */,
@@ -171,7 +129,6 @@
 		6DA47E731628FD4400C9F127 = {
 			isa = PBXGroup;
 			children = (
-				EFC0B9CE16299CC10087B697 /* SDWebImage.xcodeproj */,
 				6DA47E881628FD4400C9F127 /* FaceGuitar */,
 				6DA47E811628FD4400C9F127 /* Frameworks */,
 				6DA47E7F1628FD4400C9F127 /* Products */,
@@ -189,15 +146,16 @@
 		6DA47E811628FD4400C9F127 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFC0B9CC16299A7C0087B697 /* ImageIO.framework */,
-				EFC0B9CA16299A750087B697 /* MapKit.framework */,
+<<<<<<< HEAD
 				EFF31F7C16296F7A00074395 /* FacebookSDKResources.bundle */,
 				EFF31F7D16296F7A00074395 /* FBUserSettingsViewResources.bundle */,
 				EFF31F7916296F3D00074395 /* FacebookSDK.framework */,
 				EFF31F7516296E2700074395 /* Social.framework */,
 				EFF31F7016296DD500074395 /* Accounts.framework */,
 				EFF31F7116296DD500074395 /* AdSupport.framework */,
+=======
 				BE8E8A86162965FB0004EEE2 /* AVFoundation.framework */,
+>>>>>>> 4d90598205504db1eaef071668d0b50f39686453
 				BE94275D162918A200EF55A0 /* GameKit.framework */,
 				6DA47E821628FD4400C9F127 /* UIKit.framework */,
 				6DA47E841628FD4400C9F127 /* Foundation.framework */,
@@ -238,8 +196,6 @@
 				BE94275B1629188D00EF55A0 /* NetworkManager.m */,
 				BE8E8A7616293C510004EEE2 /* Controllers.h */,
 				BE8E8A7716293C510004EEE2 /* Controllers.m */,
-				EFF31FA8162990C800074395 /* Friend.h */,
-				EFF31FA9162990C800074395 /* Friend.m */,
 			);
 			path = FaceGuitar;
 			sourceTree = "<group>";
@@ -258,7 +214,6 @@
 		BE8E8A88162966650004EEE2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EFC0B99E162996950087B697 /* placeholder.gif */,
 				BE164FF41629703B008A5BCD /* background@2x.png */,
 				BE164FF51629703B008A5BCD /* button-chord-off@2x.png */,
 				BE164FF61629703B008A5BCD /* button-chord-on@2x.png */,
@@ -271,16 +226,6 @@
 				BE8E8A89162966740004EEE2 /* gangnam.mp3 */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		EFC0B9CF16299CC10087B697 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EFC0B9D816299CC20087B697 /* libSDWebImage.a */,
-				EFC0B9DA16299CC20087B697 /* libSDWebImageARC.a */,
-				EFC0B9DC16299CC20087B697 /* libSDWebImageARC+MKAnnotation.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +242,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				EFC0B9DE16299CE60087B697 /* PBXTargetDependency */,
 			);
 			name = FaceGuitar;
 			productName = FaceGuitar;
@@ -323,42 +267,12 @@
 			mainGroup = 6DA47E731628FD4400C9F127;
 			productRefGroup = 6DA47E7F1628FD4400C9F127 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = EFC0B9CF16299CC10087B697 /* Products */;
-					ProjectRef = EFC0B9CE16299CC10087B697 /* SDWebImage.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6DA47E7D1628FD4400C9F127 /* FaceGuitar */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		EFC0B9D816299CC20087B697 /* libSDWebImage.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSDWebImage.a;
-			remoteRef = EFC0B9D716299CC20087B697 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EFC0B9DA16299CC20087B697 /* libSDWebImageARC.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSDWebImageARC.a;
-			remoteRef = EFC0B9D916299CC20087B697 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EFC0B9DC16299CC20087B697 /* libSDWebImageARC+MKAnnotation.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libSDWebImageARC+MKAnnotation.a";
-			remoteRef = EFC0B9DB16299CC20087B697 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6DA47E7C1628FD4400C9F127 /* Resources */ = {
@@ -370,8 +284,10 @@
 				6DA47EA31628FE6200C9F127 /* PlayViewController.xib in Resources */,
 				6DA47EA8162900F400C9F127 /* FacesViewController.xib in Resources */,
 				BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */,
+<<<<<<< HEAD
 				EFF31F7F16296F7A00074395 /* FacebookSDKResources.bundle in Resources */,
 				EFF31F8016296F7A00074395 /* FBUserSettingsViewResources.bundle in Resources */,
+=======
 				BE8E8A8A162966740004EEE2 /* gangnam.mp3 in Resources */,
 				BE164FFD1629703B008A5BCD /* background@2x.png in Resources */,
 				BE164FFE1629703B008A5BCD /* button-chord-off@2x.png in Resources */,
@@ -382,7 +298,7 @@
 				BE1650031629703B008A5BCD /* guitarguy-off@2x.png in Resources */,
 				BE1650041629703B008A5BCD /* guitarguy-on@2x.png in Resources */,
 				BE1650051629703B008A5BCD /* logo@2x.png in Resources */,
-				EFC0B99F162996950087B697 /* placeholder.gif in Resources */,
+>>>>>>> 4d90598205504db1eaef071668d0b50f39686453
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,19 +321,10 @@
 				6DA47EB81629166300C9F127 /* Dot.m in Sources */,
 				6DA47EBB16291C8200C9F127 /* FacebookManager.m in Sources */,
 				BE8E8A84162950D60004EEE2 /* TransitionController.m in Sources */,
-				EFF31FAA162990C800074395 /* Friend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EFC0B9DE16299CE60087B697 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SDWebImage ARC";
-			targetProxy = EFC0B9DD16299CE60087B697 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6DA47E8B1628FD4400C9F127 /* InfoPlist.strings */ = {
@@ -499,15 +406,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceGuitar/FaceGuitar-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"$(OBJROOT)/UninstalledProducts/include\"",
-					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
-				);
 				INFOPLIST_FILE = "FaceGuitar/FaceGuitar-Info.plist";
-				OTHER_LDFLAGS = (
-					"-lsqlite3.0",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -522,15 +422,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceGuitar/FaceGuitar-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"$(OBJROOT)/UninstalledProducts/include\"",
-					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
-				);
 				INFOPLIST_FILE = "FaceGuitar/FaceGuitar-Info.plist";
-				OTHER_LDFLAGS = (
-					"-lsqlite3.0",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -18,5 +18,5 @@
 
 
 - (IBAction)hostGame:(id)sender;
-
+-(void)updateLoginBtn;
 @end

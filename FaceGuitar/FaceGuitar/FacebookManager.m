@@ -7,8 +7,13 @@
 //
 
 #import "FacebookManager.h"
-@interface FacebookManager(){
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "Friend.h"
+#define MAX_FRIENDS 50
 
+@interface FacebookManager(){
+    NSMutableArray *friendsArray;
+    UIImage *placeholderImage;
 }
 @end
 @implementation FacebookManager
@@ -40,11 +45,51 @@ static FacebookManager *sharedInstance = nil;
     
     // if the session isn't open, let's open it now and present the login UX to the user
     [session openWithCompletionHandler:^(FBSession *session,
-                                                     FBSessionState status,
-                                                     NSError *error) {
-
+                                         FBSessionState status,
+                                         NSError *error) {
+        
     }];
+    [self handleDidBecomeActive];
 }
+-(void)handleDidBecomeActive{
+    [FBSession.activeSession handleDidBecomeActive];
+    if (session.isOpen){
+        NSString *urlStr = [NSString stringWithFormat:@"https://graph.facebook.com/me/friends?fields=id,name,picture&access_token=%@",
+                            session.accessToken];
+        
+        NSURL *url = [NSURL URLWithString:urlStr];
+        NSData* data = [NSData dataWithContentsOfURL:url];
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        if([dict valueForKey:@"Error"]){
+            NSLog(@"error");
+        }else{
+            NSArray* friendsResult = [dict valueForKey:@"data"];
+            if([friendsResult count]>0){
+                int random = arc4random()%[friendsResult count];
+                friendsArray = [NSMutableArray array];
+                for(int i=0;i<[friendsResult count]&&[friendsArray count]<MAX_FRIENDS;i++){
+                    int j=(i+random)%[friendsResult count];
+                    NSDictionary *friendDict = [friendsResult objectAtIndex:j];
+                    NSDictionary *friendImage = [(NSDictionary*)[friendDict objectForKey:@"picture"] objectForKey:@"data"];
+                    if((BOOL) [friendImage objectForKey:@"is_silhouette"])
+                        NSLog(@"");
+                    else NSLog(@"bye");
+                    NSString *fName = [friendDict valueForKey:@"name"];
+                    int fId = [(NSString*)[friendDict valueForKey:@"id"] intValue];
+                    UIImageView *fImgView = [[UIImageView alloc] init];
+                    [fImgView setImageWithURL:[NSURL URLWithString:[friendImage valueForKey:@"url"]] placeholderImage:placeholderImage];
+                    Friend *friend = [[Friend alloc] initWithName:fName fbId:fId imageView:fImgView];
+                    [friendsArray addObject:friend];
+                    
+                }
+            }
+        }
+    }else{
+        friendsArray = nil;
+    }
+}
+
 -(void)logout{
     if(!session.isOpen)return;
     [session closeAndClearTokenInformation];
@@ -56,7 +101,8 @@ static FacebookManager *sharedInstance = nil;
     self = [super init];
     if (self) {
         session = [[FBSession alloc]init];
-        NSLog(@"FBManager made");
+        placeholderImage = [UIImage imageNamed:@"placeholder.gif"];
+        
     }
     
     return self;

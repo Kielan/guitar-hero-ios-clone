@@ -14,6 +14,7 @@
 
 @interface AppDelegate ()
 {
+    MainMenuViewController *viewController;
 }
 
 @property (strong, readwrite, nonatomic) TransitionController *transitionController;
@@ -40,10 +41,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    MainMenuViewController *viewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
+    viewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
     self.transitionController = [[TransitionController alloc] initWithViewController:viewController];
     self.window.rootViewController = self.transitionController;
     [self.window makeKeyAndVisible];
+    [[FacebookManager sharedInstance] handleDidBecomeActive];
     return YES;
 }
 
@@ -67,7 +69,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    [FBSession.activeSession handleDidBecomeActive];
+    [viewController updateLoginBtn];
+    [[FacebookManager sharedInstance] handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

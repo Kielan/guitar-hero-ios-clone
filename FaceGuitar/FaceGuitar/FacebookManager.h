@@ -18,4 +18,5 @@
 - (BOOL)isOpen;
 - (void)login;
 - (void)logout;
+- (void)handleDidBecomeActive;
 @end

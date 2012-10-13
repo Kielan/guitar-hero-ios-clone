@@ -11,6 +11,7 @@
 #import "Controllers.h"
 #import "PlayViewController.h"
 #import "AppDelegate.h"
+#import "FacebookManager.h"
 
 typedef enum { kNetworkDisconnected, kNetworkConnecting, kNetworkConnected } NetworkStatus;
 
@@ -25,6 +26,7 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
     IBOutlet UIImageView *strumIV;
     IBOutlet UIButton *guitarGuy;
     IBOutlet UIImageView *logo;
+    __weak IBOutlet UIButton *loginBtn;
     
 }
 
@@ -55,6 +57,8 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self updateLoginBtn];
+    
     [self shiftButtonsDown];
     logo.transform = CGAffineTransformMakeScale(0.1f, 0.1f);
     self.connectIndicatorView.hidden = YES;
@@ -99,9 +103,25 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
                      completion:^(BOOL finished){
                      }];
 }
+- (IBAction)LoginBtnPressed:(id)sender {
+    if ([[FacebookManager sharedInstance] isOpen]){
+        [[FacebookManager sharedInstance] logout];
+    }else{
+        [[FacebookManager sharedInstance] login];
+    }
+    [self performSelector: @selector(updateLoginBtn) withObject:self afterDelay:0.1];
+}
+-(void)updateLoginBtn{
+    if ([[FacebookManager sharedInstance] isOpen]){
+        [loginBtn setTitle:@"Logout" forState:UIControlStateNormal];
+    }else{
+    [loginBtn setTitle:@"Login" forState:UIControlStateNormal];
+    }
+}
 
 - (void)viewDidUnload
 {
+    loginBtn = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
