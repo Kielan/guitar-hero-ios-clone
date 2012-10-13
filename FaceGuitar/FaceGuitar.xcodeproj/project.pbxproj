@@ -24,6 +24,8 @@
 		6DA47EBB16291C8200C9F127 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EBA16291C8200C9F127 /* FacebookManager.m */; };
 		BE8E8A7816293C510004EEE2 /* Controllers.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E8A7716293C510004EEE2 /* Controllers.m */; };
 		BE8E8A84162950D60004EEE2 /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E8A83162950D60004EEE2 /* TransitionController.m */; };
+		BE8E8A87162965FB0004EEE2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8E8A86162965FB0004EEE2 /* AVFoundation.framework */; };
+		BE8E8A8A162966740004EEE2 /* gangnam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BE8E8A89162966740004EEE2 /* gangnam.mp3 */; };
 		BE9427571629159F00EF55A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9427551629159F00EF55A0 /* MainMenuViewController.m */; };
 		BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9427561629159F00EF55A0 /* MainMenuViewController.xib */; };
 		BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94275B1629188D00EF55A0 /* NetworkManager.m */; };
@@ -61,6 +63,8 @@
 		BE8E8A7716293C510004EEE2 /* Controllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controllers.m; sourceTree = "<group>"; };
 		BE8E8A82162950D60004EEE2 /* TransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionController.h; sourceTree = "<group>"; };
 		BE8E8A83162950D60004EEE2 /* TransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionController.m; sourceTree = "<group>"; };
+		BE8E8A86162965FB0004EEE2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BE8E8A89162966740004EEE2 /* gangnam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gangnam.mp3; sourceTree = "<group>"; };
 		BE9427541629159F00EF55A0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		BE9427551629159F00EF55A0 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		BE9427561629159F00EF55A0 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8E8A87162965FB0004EEE2 /* AVFoundation.framework in Frameworks */,
 				BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */,
 				6DA47E831628FD4400C9F127 /* UIKit.framework in Frameworks */,
 				6DA47E851628FD4400C9F127 /* Foundation.framework in Frameworks */,
@@ -104,6 +109,7 @@
 		6DA47E811628FD4400C9F127 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE8E8A86162965FB0004EEE2 /* AVFoundation.framework */,
 				BE94275D162918A200EF55A0 /* GameKit.framework */,
 				6DA47E821628FD4400C9F127 /* UIKit.framework */,
 				6DA47E841628FD4400C9F127 /* Foundation.framework */,
@@ -115,6 +121,7 @@
 		6DA47E881628FD4400C9F127 /* FaceGuitar */ = {
 			isa = PBXGroup;
 			children = (
+				BE8E8A88162966650004EEE2 /* Resources */,
 				BE8E8A82162950D60004EEE2 /* TransitionController.h */,
 				BE8E8A83162950D60004EEE2 /* TransitionController.m */,
 				BE9427541629159F00EF55A0 /* MainMenuViewController.h */,
@@ -156,6 +163,14 @@
 				6DA47E901628FD4400C9F127 /* FaceGuitar-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE8E8A88162966650004EEE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE8E8A89162966740004EEE2 /* gangnam.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +229,7 @@
 				6DA47EA31628FE6200C9F127 /* PlayViewController.xib in Resources */,
 				6DA47EA8162900F400C9F127 /* FacesViewController.xib in Resources */,
 				BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */,
+				BE8E8A8A162966740004EEE2 /* gangnam.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
