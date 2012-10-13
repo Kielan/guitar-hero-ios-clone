@@ -11,6 +11,7 @@
 #import "MainMenuViewController.h"
 #import "FacebookManager.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "PlayViewController.h"
 
 @interface AppDelegate ()
 {

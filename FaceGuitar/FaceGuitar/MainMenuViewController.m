@@ -244,8 +244,10 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
     NSUInteger i = 0;
     NetworkManager *networkManager = [NetworkManager sharedNetworkManager];
     [networkManager sendDataToControllers:[NSData dataWithBytes:&i length:sizeof(i)] dataMode:GKSendDataReliable];
+    networkManager.gkSession.delegate = nil;
     
     PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
+    playController.map = gangnam;
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];
 }
