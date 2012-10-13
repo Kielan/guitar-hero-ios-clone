@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "FacebookManager.h"
 #import "Song.h"
+#import "SongPickerViewController.h"
 
 typedef enum { kNetworkDisconnected, kNetworkConnecting, kNetworkConnected } NetworkStatus;
 
@@ -80,7 +81,7 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
                                               self.hostGameBtn.center = CGPointMake(self.hostGameBtn.center.x, self.hostGameBtn.center.y - 500);
                                           }
                                           completion:^(BOOL finished){
-                                              [self startGame:self];
+                                              //[self startGame:self];
                                           }];
                      }];
 }
@@ -254,10 +255,14 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
     [networkManager sendDataToControllers:[NSData dataWithBytes:&i length:sizeof(i)] dataMode:GKSendDataReliable];
     networkManager.gkSession.delegate = nil;
     
-    PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
-    playController.song = [Song gangnamSong];
+//    PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
+//    playController.song = [Song gangnamSong];
+//    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+//    [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];]
+    
+    SongPickerViewController  *songPickerController = [[SongPickerViewController alloc] init];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];
+    [appDelegate.transitionController transitionToViewController:songPickerController withOptions:UIViewAnimationTransitionCurlUp];
 }
 
 - (void)session:(GKSession *)session didReceiveConnectionRequestFromPeer:(NSString *)peerID
