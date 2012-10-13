@@ -7,8 +7,9 @@
 //
 
 #import "PlayViewController.h"
+#import "Controllers.h"
 
-@interface PlayViewController () {
+@interface PlayViewController () <ControllersDelegate> {
     Column *col1;
     Column *col2;
     Column *col3;
@@ -27,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [Controllers sharedControllers].delegate = self;
     }
     return self;
 }
@@ -197,6 +198,38 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+- (void)controllers:(Controllers *)controllers didChangeButtonStateButtonType:(ControllerButtonType)buttonType newButtonState:(ControllerButtonState)buttonState
+{
+    if (buttonType == kButtonTap)
+    {
+        TunesController *tunesController = [Controllers sharedControllers].tunesController;
+        if (tunesController.aButtonState == kButtonPressed || tunesController.aButtonState == kButtonJustPressed)
+        {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.tag = 1;
+            [self press:button];
+        }
+        if (tunesController.bButtonState == kButtonPressed || tunesController.bButtonState == kButtonJustPressed)
+        {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.tag = 2;
+            [self press:button];
+        }
+        if (tunesController.xButtonState == kButtonPressed || tunesController.xButtonState == kButtonJustPressed)
+        {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.tag = 3;
+            [self press:button];
+        }
+        if (tunesController.yButtonState == kButtonPressed || tunesController.yButtonState == kButtonJustPressed)
+        {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.tag = 4;
+            [self press:button];
+        }
+    }
 }
 
 @end

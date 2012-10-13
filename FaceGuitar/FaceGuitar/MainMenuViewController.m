@@ -9,6 +9,8 @@
 #import "MainMenuViewController.h"
 #import "NetworkManager.h"
 #import "Controllers.h"
+#import "PlayViewController.h"
+#import "AppDelegate.h"
 
 typedef enum { kNetworkDisconnected, kNetworkConnecting, kNetworkConnected } NetworkStatus;
 
@@ -142,6 +144,10 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
                 NSUInteger i = 0;
                 
                 [networkManager sendDataToControllers:[NSData dataWithBytes:&i length:sizeof(i)] dataMode:GKSendDataReliable];
+                
+                PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
+                AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+                [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];
             }
         }
             break;

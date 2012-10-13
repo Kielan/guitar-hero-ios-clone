@@ -10,7 +10,7 @@
 
 @implementation Dot
 
-
+@synthesize state = _state;
 
 - (id)initWithFrame:(CGRect)frame
 {

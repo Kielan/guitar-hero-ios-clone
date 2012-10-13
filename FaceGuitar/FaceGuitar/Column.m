@@ -10,6 +10,8 @@
 
 @implementation Column
 
+@synthesize dotArray = _dotArray, colour = _colour, numGreen = _numGreen, currHitDot = _currHitDot, active = _active;
+
 - (id)init
 {
     self = [super init];

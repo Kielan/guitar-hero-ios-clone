@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <GameKit/GameKit.h>
 
+typedef enum { kButtonTuneA, kButtonTuneB, kButtonTuneX, kButtonTuneY, kButtonTap } ControllerButtonType;
 typedef enum { kButtonReleased, kButtonJustReleased, kButtonPressed, kButtonJustPressed } ControllerButtonState;
 
 
@@ -26,11 +27,21 @@ typedef enum { kButtonReleased, kButtonJustReleased, kButtonPressed, kButtonJust
 @end
 
 
+@protocol ControllersDelegate;
+
 @interface Controllers : NSObject <GKSessionDelegate>
 
 @property (nonatomic, readonly, strong) TunesController *tunesController;
 @property (nonatomic, readonly, strong) TapController *tapController;
+@property (nonatomic, weak) id<ControllersDelegate> delegate;
 
 + (Controllers *)sharedControllers;
+
+@end
+
+
+@protocol ControllersDelegate <NSObject>
+
+- (void)controllers:(Controllers *)controllers didChangeButtonStateButtonType:(ControllerButtonType)buttonType newButtonState:(ControllerButtonState)buttonState;
 
 @end

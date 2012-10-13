@@ -7,20 +7,29 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
+#import "MainMenuViewController.h"
+
+
+@interface AppDelegate ()
+
+@property (strong, readwrite, nonatomic) TransitionController *transitionController;
+
+@end
+
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize transitionController = _transitionController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    MainMenuViewController *viewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
+    self.transitionController = [[TransitionController alloc] initWithViewController:viewController];
+    self.window.rootViewController = self.transitionController;
     [self.window makeKeyAndVisible];
     return YES;
 }

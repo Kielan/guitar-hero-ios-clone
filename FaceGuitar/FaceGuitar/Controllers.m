@@ -8,8 +8,6 @@
 
 #import "Controllers.h"
 
-typedef enum { kButtonTuneA, kButtonTuneB, kButtonTuneX, kButtonTuneY, kButtonTap } ControllerButtonType;
-
 typedef struct { ControllerButtonType buttonType; ControllerButtonState buttonState; } ControllerButtonAction;
 
 //@interface ButtonAction : NSObject <NSCoding>
@@ -79,6 +77,7 @@ typedef struct { ControllerButtonType buttonType; ControllerButtonState buttonSt
 
 @synthesize tapController = _tapController;
 @synthesize tunesController = _tunesController;
+@synthesize delegate = _delegate;
 
 static Controllers *_sharedControllers;
 
@@ -138,6 +137,8 @@ static Controllers *_sharedControllers;
         default:
             break;
     }
+    
+    [self.delegate controllers:self didChangeButtonStateButtonType:action.buttonType newButtonState:action.buttonState];
 }
 
 @end
