@@ -50,24 +50,28 @@
     col1.frame = CGRectMake(0, 0, 120, 600);
     col1.center = CGPointMake(204, 420);
     col1.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    col1.colour = kRed;
     [self.view addSubview:col1];
     
     col2 = [[Column alloc] init];
     col2.frame = CGRectMake(0, 0, 120, 600);
     col2.center = CGPointMake(410, 420);
     col2.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    col2.colour = kGreen;
     [self.view addSubview:col2];
     
     col3 = [[Column alloc] init];
     col3.frame = CGRectMake(0, 0, 120, 600);
     col3.center = CGPointMake(614, 420);
     col3.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    col3.colour = kBlue;
     [self.view addSubview:col3];
     
     col4 = [[Column alloc] init];
     col4.frame = CGRectMake(0, 0, 120, 600);
     col4.center = CGPointMake(820, 420);
     col4.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    col4.colour = kYellow;
     [self.view addSubview:col4];
     
     NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"gangnam" ofType:@"mp3"]];
@@ -184,7 +188,11 @@
         [updateTimer invalidate];
         [[NSNotificationCenter defaultCenter] removeObserver:self];
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"Game Over" delegate:self cancelButtonTitle:@"Replay" otherButtonTitles:nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                            message:@"Game Over"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Replay"
+                                                  otherButtonTitles:nil];
         [alertView show];
     }
     else
@@ -224,10 +232,10 @@
     [col2 update];
     [col3 update];
     [col4 update];
-    NSLog(@"col1: %d, col2: %d, col3: %d, col4: %d", col1.active,
-                                                      col2.active,
-                                                      col3.active,
-                                                      col4.active);
+//    NSLog(@"col1: %d, col2: %d, col3: %d, col4: %d", col1.active,
+//                                                      col2.active,
+//                                                      col3.active,
+//                                                      col4.active);
 }
 
 - (void)generateDotForCol1:(BOOL)one

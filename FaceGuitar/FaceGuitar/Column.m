@@ -7,8 +7,11 @@
 //
 
 #import "Column.h"
+#import "ImagesManager.h"
 
 @implementation Column
+
+static ImagesManager *imagesManager;
 
 @synthesize dotArray = _dotArray, colour = _colour, numGreen = _numGreen, currHitDot = _currHitDot, active = _active;
 
@@ -19,6 +22,7 @@
         NSLog(@"col init");
         self.dotArray = [[NSMutableArray alloc] init];
         self.numGreen = 0;
+        imagesManager = [ImagesManager sharedImagesManager];
     }
     return self;
 }
@@ -28,12 +32,12 @@
     for (Dot *dot in self.dotArray) {
         dot.center = CGPointMake(dot.center.x, dot.center.y + 5);
         if (dot.center.y + 25 < 500) {
-            dot.backgroundColor = [UIColor redColor];
+//            dot.backgroundColor = [UIColor redColor];
             dot.state = kIdle;
         } else if (dot.center.y + 25 < 600) {
             self.currHitDot = dot;
             if (dot.state == kIdle) {
-                dot.backgroundColor = [UIColor greenColor];
+//                dot.backgroundColor = [UIColor greenColor];
                 self.active = YES;
                 dot.state = kInZone;
             }
@@ -42,7 +46,7 @@
                 // this dot was missed!
                 self.active = NO;
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"miss" object:nil];
-                dot.backgroundColor = [UIColor blackColor];
+                dot.image = imagesManager.grayDot;
                 dot.state = kMiss;
             }
         } else {
@@ -58,7 +62,21 @@
 - (void)addBlock {
     Dot *dot = [[Dot alloc] init];
     dot.frame = CGRectMake (0, 0, 50, 50);
-    dot.backgroundColor = [UIColor redColor];
+    switch (self.colour) {
+        case kRed:
+            dot.image = imagesManager.redDot;
+            break;
+        case kBlue:
+            dot.image = imagesManager.blueDot;
+            break;
+        case kGreen:
+            dot.image = imagesManager.greenDot;
+            break;
+        case kYellow:
+            dot.image = imagesManager.yellowDot;
+            break;
+    }
+    dot.backgroundColor = [UIColor clearColor];
     dot.center = CGPointMake(60, 0);
     dot.state = kIdle;
     

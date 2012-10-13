@@ -27,6 +27,8 @@
 		6DA47EEC16297E5400C9F127 /* green-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EE816297E5400C9F127 /* green-dot@2x.png */; };
 		6DA47EED16297E5400C9F127 /* red-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EE916297E5400C9F127 /* red-dot@2x.png */; };
 		6DA47EEE16297E5400C9F127 /* yellow-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EEA16297E5400C9F127 /* yellow-dot@2x.png */; };
+		6DA47EF116297ED300C9F127 /* ImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EF016297ED200C9F127 /* ImagesManager.m */; };
+		6DA47EF3162983CE00C9F127 /* gray-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EF2162983CE00C9F127 /* gray-dot@2x.png */; };
 		BE164FFD1629703B008A5BCD /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF41629703B008A5BCD /* background@2x.png */; };
 		BE164FFE1629703B008A5BCD /* button-chord-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF51629703B008A5BCD /* button-chord-off@2x.png */; };
 		BE164FFF1629703B008A5BCD /* button-chord-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF61629703B008A5BCD /* button-chord-on@2x.png */; };
@@ -78,6 +80,9 @@
 		6DA47EE816297E5400C9F127 /* green-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-dot@2x.png"; path = "images/green-dot@2x.png"; sourceTree = "<group>"; };
 		6DA47EE916297E5400C9F127 /* red-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "red-dot@2x.png"; path = "images/red-dot@2x.png"; sourceTree = "<group>"; };
 		6DA47EEA16297E5400C9F127 /* yellow-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yellow-dot@2x.png"; path = "images/yellow-dot@2x.png"; sourceTree = "<group>"; };
+		6DA47EEF16297ED200C9F127 /* ImagesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesManager.h; sourceTree = "<group>"; };
+		6DA47EF016297ED200C9F127 /* ImagesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesManager.m; sourceTree = "<group>"; };
+		6DA47EF2162983CE00C9F127 /* gray-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-dot@2x.png"; path = "images/gray-dot@2x.png"; sourceTree = "<group>"; };
 		BE164FF41629703B008A5BCD /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "images/background@2x.png"; sourceTree = "<group>"; };
 		BE164FF51629703B008A5BCD /* button-chord-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-off@2x.png"; path = "images/button-chord-off@2x.png"; sourceTree = "<group>"; };
 		BE164FF61629703B008A5BCD /* button-chord-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-on@2x.png"; path = "images/button-chord-on@2x.png"; sourceTree = "<group>"; };
@@ -169,6 +174,8 @@
 				6DA47E9F1628FE6200C9F127 /* PlayViewController.h */,
 				6DA47EA01628FE6200C9F127 /* PlayViewController.m */,
 				6DA47EA11628FE6200C9F127 /* PlayViewController.xib */,
+				6DA47EEF16297ED200C9F127 /* ImagesManager.h */,
+				6DA47EF016297ED200C9F127 /* ImagesManager.m */,
 				6DA47EAD162903D800C9F127 /* Column.h */,
 				6DA47EAE162903D800C9F127 /* Column.m */,
 				6DA47EB61629166200C9F127 /* Dot.h */,
@@ -197,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				BE164FF41629703B008A5BCD /* background@2x.png */,
+				6DA47EF2162983CE00C9F127 /* gray-dot@2x.png */,
 				6DA47EE716297E5400C9F127 /* blue-dot@2x.png */,
 				6DA47EE816297E5400C9F127 /* green-dot@2x.png */,
 				6DA47EE916297E5400C9F127 /* red-dot@2x.png */,
@@ -286,6 +294,7 @@
 				6DA47EEC16297E5400C9F127 /* green-dot@2x.png in Resources */,
 				6DA47EED16297E5400C9F127 /* red-dot@2x.png in Resources */,
 				6DA47EEE16297E5400C9F127 /* yellow-dot@2x.png in Resources */,
+				6DA47EF3162983CE00C9F127 /* gray-dot@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +317,7 @@
 				6DA47EB81629166300C9F127 /* Dot.m in Sources */,
 				6DA47EBB16291C8200C9F127 /* FacebookManager.m in Sources */,
 				BE8E8A84162950D60004EEE2 /* TransitionController.m in Sources */,
+				6DA47EF116297ED300C9F127 /* ImagesManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
