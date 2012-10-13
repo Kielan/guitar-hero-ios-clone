@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "PlayViewController.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -18,6 +20,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+
+- (IBAction)start:(id)sender {
+    PlayViewController *pvc = [[PlayViewController alloc] init];
+    [self presentModalViewController:pvc animated:YES];
 }
 
 - (void)viewDidUnload
