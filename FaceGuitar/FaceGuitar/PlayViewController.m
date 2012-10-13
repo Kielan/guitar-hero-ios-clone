@@ -10,6 +10,9 @@
 #import "Controllers.h"
 #import <AVFoundation/AVFoundation.h>
 #import "AppDelegate.h"
+#import "ImagesManager.h"
+
+static ImagesManager *imagesManager;
 
 @interface PlayViewController () <ControllersDelegate, UIAlertViewDelegate> {
     Column *col1;
@@ -47,29 +50,29 @@
     rowId = 0;
     
     col1 = [[Column alloc] init];
-    col1.frame = CGRectMake(0, 0, 120, 600);
-    col1.center = CGPointMake(204, 420);
+    col1.frame = CGRectMake(0, 0, 120, 500);
+    col1.center = CGPointMake(204, 370);
     col1.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     col1.colour = kRed;
     [self.view addSubview:col1];
     
     col2 = [[Column alloc] init];
-    col2.frame = CGRectMake(0, 0, 120, 600);
-    col2.center = CGPointMake(410, 420);
+    col2.frame = CGRectMake(0, 0, 120, 500);
+    col2.center = CGPointMake(410, 370);
     col2.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     col2.colour = kGreen;
     [self.view addSubview:col2];
     
     col3 = [[Column alloc] init];
-    col3.frame = CGRectMake(0, 0, 120, 600);
-    col3.center = CGPointMake(614, 420);
+    col3.frame = CGRectMake(0, 0, 120, 500);
+    col3.center = CGPointMake(614, 370);
     col3.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     col3.colour = kBlue;
     [self.view addSubview:col3];
     
     col4 = [[Column alloc] init];
-    col4.frame = CGRectMake(0, 0, 120, 600);
-    col4.center = CGPointMake(820, 420);
+    col4.frame = CGRectMake(0, 0, 120, 500);
+    col4.center = CGPointMake(820, 370);
     col4.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     col4.colour = kYellow;
     [self.view addSubview:col4];
@@ -98,17 +101,57 @@
                                                object:nil];
 }
 
+- (void)showHitTextAtLocation:(CGPoint)pt {
+    int random = arc4random()%3;
+    UIImage *hitImage;
+    switch (random) {
+        case 0:
+            hitImage = imagesManager.hitText;
+            break;
+        case 1:
+            hitImage = imagesManager.goodText;
+            break;
+        case 2:
+            hitImage = imagesManager.greatText;
+            break;
+        default:
+            break;
+    }
+    UIImageView *text = [[UIImageView alloc] initWithImage:hitImage];
+    [self.view addSubview:text];
+    text.center = pt;
+    [UIView animateWithDuration:0.50
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         text.center = CGPointMake(text.center.x, text.center.y - 50);
+                         text.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         [text removeFromSuperview];
+                     }];
+}
+
 
 - (void)buttonPressedWithNumber:(int)number
 {
-    
+    CGFloat scale = 4.0f;
     switch (number) {
         case 1:
             if (col1.active) {
                 col1.currHitDot.state = kHit;
-                col1.currHitDot.backgroundColor = [UIColor orangeColor];
                 col1.active = NO;
                 [self updateHitCount];
+                [self showHitTextAtLocation:CGPointMake(col1.center.x, col1.frame.origin.y + 500)];
+                [UIView animateWithDuration:0.35
+                                      delay:0.0
+                                    options:UIViewAnimationOptionCurveLinear
+                                 animations:^{
+                                     col1.currHitDot.transform = CGAffineTransformMakeScale(scale, scale);
+                                     col1.currHitDot.alpha = 0.0;
+                                 }
+                                 completion:^(BOOL finished){
+                                 }];
             } else {
                 [self updateMissCount];
             }
@@ -116,9 +159,18 @@
         case 2:
             if (col2.active) {
                 col2.currHitDot.state = kHit;
-                col2.currHitDot.backgroundColor = [UIColor orangeColor];
                 col2.active = NO;
                 [self updateHitCount];
+                [self showHitTextAtLocation:CGPointMake(col2.center.x, col2.frame.origin.y + 500)];
+                [UIView animateWithDuration:0.35
+                                      delay:0.0
+                                    options:UIViewAnimationOptionCurveLinear
+                                 animations:^{
+                                     col2.currHitDot.transform = CGAffineTransformMakeScale(scale, scale);
+                                     col2.currHitDot.alpha = 0.0;
+                                 }
+                                 completion:^(BOOL finished){
+                                 }];
             } else {
                 [self updateMissCount];
             }
@@ -126,9 +178,18 @@
         case 3:
             if (col3.active) {
                 col3.currHitDot.state = kHit;
-                col3.currHitDot.backgroundColor = [UIColor orangeColor];
                 col3.active = NO;
                 [self updateHitCount];
+                [self showHitTextAtLocation:CGPointMake(col3.center.x, col3.frame.origin.y + 500)];
+                [UIView animateWithDuration:0.35
+                                      delay:0.0
+                                    options:UIViewAnimationOptionCurveLinear
+                                 animations:^{
+                                     col3.currHitDot.transform = CGAffineTransformMakeScale(scale, scale);
+                                     col3.currHitDot.alpha = 0.0;
+                                 }
+                                 completion:^(BOOL finished){
+                                 }];
             } else {
                 [self updateMissCount];
             }
@@ -136,9 +197,18 @@
         case 4:
             if (col4.active) {
                 col4.currHitDot.state = kHit;
-                col4.currHitDot.backgroundColor = [UIColor orangeColor];
                 col4.active = NO;
                 [self updateHitCount];
+                [self showHitTextAtLocation:CGPointMake(col4.center.x, col4.frame.origin.y + 500)];
+                [UIView animateWithDuration:0.35
+                                      delay:0.0
+                                    options:UIViewAnimationOptionCurveLinear
+                                 animations:^{
+                                     col4.currHitDot.transform = CGAffineTransformMakeScale(scale, scale);
+                                     col4.currHitDot.alpha = 0.0;
+                                 }
+                                 completion:^(BOOL finished){
+                                 }];
             } else {
                 [self updateMissCount];
             }

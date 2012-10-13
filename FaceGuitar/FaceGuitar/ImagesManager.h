@@ -17,5 +17,8 @@
 @property (nonatomic, strong) UIImage *blueDot;
 @property (nonatomic, strong) UIImage *yellowDot;
 @property (nonatomic, strong) UIImage *grayDot;
+@property (nonatomic, strong) UIImage *hitText;
+@property (nonatomic, strong) UIImage *goodText;
+@property (nonatomic, strong) UIImage *greatText;
 
 @end
