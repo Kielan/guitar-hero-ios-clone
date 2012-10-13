@@ -9,9 +9,12 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "MainMenuViewController.h"
-
+#import "FacebookManager.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()
+{
+}
 
 @property (strong, readwrite, nonatomic) TransitionController *transitionController;
 
@@ -22,6 +25,16 @@
 
 @synthesize window = _window;
 @synthesize transitionController = _transitionController;
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    
+    return [[FacebookManager sharedInstance].session handleOpenURL:url];
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -54,11 +67,14 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSession.activeSession handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    [[FacebookManager sharedInstance] logout];
 }
 
 @end

@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <FacebookSDK/FacebookSDK.h>
 @interface FacebookManager : NSObject
+{
+    FBSession *session;
+}
+@property FBSession *session;
 
++ (FacebookManager*)sharedInstance;
+- (BOOL)isOpen;
+- (void)login;
+- (void)logout;
 @end
