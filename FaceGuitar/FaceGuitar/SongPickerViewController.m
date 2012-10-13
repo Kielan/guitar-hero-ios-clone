@@ -29,7 +29,10 @@
         NSArray *songs = [Song songs];
         self.songControllers = [NSMutableArray arrayWithCapacity:songs.count];
         
-        CGFloat x = 200, y = 768.0 / 2;
+        CGFloat x = 200, y = 768.0 / 2, xSpacing = 50;
+        CGFloat songViewWidth = 309;
+        CGFloat totalWidth = songs.count * songViewWidth + (songs.count - 1) * xSpacing;
+        x = (1024 - totalWidth) / 2 + songViewWidth/2;
         for (Song *song in songs)
         {
             SongViewController *songController = [[SongViewController alloc] initWithSong:song];
@@ -40,7 +43,7 @@
             [self.view addSubview:songController.view];
             [self.songControllers addObject:songController];
             
-            x += songController.view.frame.size.width + 50;
+            x += songController.view.frame.size.width + xSpacing;
         }
     }
     return self;
