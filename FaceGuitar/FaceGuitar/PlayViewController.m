@@ -38,6 +38,7 @@ static ImagesManager *imagesManager;
     IBOutlet UIButton *endRestartButton;
     IBOutlet UIButton *endChangeButton;
     IBOutlet UIImageView *endView;
+    IBOutlet UIView *endScreen;
 }
 
 - (IBAction)restart:(id)sender;
@@ -60,9 +61,10 @@ static ImagesManager *imagesManager;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    endChangeButton.hidden = YES;
-    endRestartButton.hidden = YES;
-    endView.hidden = YES;
+    endScreen.hidden = YES;
+//    endChangeButton.hidden = YES;
+//    endRestartButton.hidden = YES;
+//    endView.hidden = YES;
     
     friends = [FacebookManager sharedInstance].friendsArray;
     friendIndex = 0;
@@ -162,7 +164,7 @@ static ImagesManager *imagesManager;
     view.frame = CGRectMake(0, curYloc, view.frame.size.width, view.frame.size.height);
     curYloc += 50;
     scrollView.contentSize = CGSizeMake(600, curYloc);
-    NSLog(NSStringFromCGSize(scrollView.contentSize));
+//    NSLog(NSStringFromCGSize(scrollView.contentSize));
     if (scrollView.contentSize.height > 200) {
         [scrollView scrollRectToVisible:CGRectMake(0, scrollView.contentSize.height - 200, 600, 200) animated:YES];
     }
@@ -398,14 +400,16 @@ static ImagesManager *imagesManager;
     {
         [updateTimer invalidate];
         [beatTimer invalidate];
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
-        
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                            message:@"Game Over"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Replay"
-                                                  otherButtonTitles:nil];
-        [alertView show];
+//        [[NSNotificationCenter defaultCenter] removeObserver:self];
+//        
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Game Over"
+//                                                            message:@"Game Over"
+//                                                           delegate:self
+//                                                  cancelButtonTitle:@"Replay"
+//                                                  otherButtonTitles:nil];
+//        [alertView show];
+        [self.view bringSubviewToFront:endScreen];
+        endScreen.hidden = NO;
     }
     else
     {
