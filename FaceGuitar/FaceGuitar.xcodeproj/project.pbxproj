@@ -22,17 +22,19 @@
 		6DA47EAF162903D800C9F127 /* Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EAE162903D800C9F127 /* Column.m */; };
 		6DA47EB81629166300C9F127 /* Dot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EB71629166300C9F127 /* Dot.m */; };
 		6DA47EBB16291C8200C9F127 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EBA16291C8200C9F127 /* FacebookManager.m */; };
-		6DA47ED11629601300C9F127 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EC81629601300C9F127 /* background@2x.png */; };
-		6DA47ED21629601300C9F127 /* button-chord-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EC91629601300C9F127 /* button-chord-off@2x.png */; };
-		6DA47ED31629601300C9F127 /* button-chord-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47ECA1629601300C9F127 /* button-chord-on@2x.png */; };
-		6DA47ED41629601300C9F127 /* button-host@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47ECB1629601300C9F127 /* button-host@2x.png */; };
-		6DA47ED51629601300C9F127 /* button-strum-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47ECC1629601300C9F127 /* button-strum-off@2x.png */; };
-		6DA47ED61629601300C9F127 /* button-strum-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47ECD1629601300C9F127 /* button-strum-on@2x.png */; };
-		6DA47ED71629601300C9F127 /* guitarguy-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47ECE1629601300C9F127 /* guitarguy-off@2x.png */; };
-		6DA47ED81629601300C9F127 /* guitarguy-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47ECF1629601300C9F127 /* guitarguy-on@2x.png */; };
-		6DA47ED91629601300C9F127 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47ED01629601300C9F127 /* logo@2x.png */; };
+		BE164FFD1629703B008A5BCD /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF41629703B008A5BCD /* background@2x.png */; };
+		BE164FFE1629703B008A5BCD /* button-chord-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF51629703B008A5BCD /* button-chord-off@2x.png */; };
+		BE164FFF1629703B008A5BCD /* button-chord-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF61629703B008A5BCD /* button-chord-on@2x.png */; };
+		BE1650001629703B008A5BCD /* button-host@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF71629703B008A5BCD /* button-host@2x.png */; };
+		BE1650011629703B008A5BCD /* button-strum-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF81629703B008A5BCD /* button-strum-off@2x.png */; };
+		BE1650021629703B008A5BCD /* button-strum-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF91629703B008A5BCD /* button-strum-on@2x.png */; };
+		BE1650031629703B008A5BCD /* guitarguy-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FFA1629703B008A5BCD /* guitarguy-off@2x.png */; };
+		BE1650041629703B008A5BCD /* guitarguy-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FFB1629703B008A5BCD /* guitarguy-on@2x.png */; };
+		BE1650051629703B008A5BCD /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FFC1629703B008A5BCD /* logo@2x.png */; };
 		BE8E8A7816293C510004EEE2 /* Controllers.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E8A7716293C510004EEE2 /* Controllers.m */; };
 		BE8E8A84162950D60004EEE2 /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E8A83162950D60004EEE2 /* TransitionController.m */; };
+		BE8E8A87162965FB0004EEE2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8E8A86162965FB0004EEE2 /* AVFoundation.framework */; };
+		BE8E8A8A162966740004EEE2 /* gangnam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BE8E8A89162966740004EEE2 /* gangnam.mp3 */; };
 		BE9427571629159F00EF55A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9427551629159F00EF55A0 /* MainMenuViewController.m */; };
 		BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9427561629159F00EF55A0 /* MainMenuViewController.xib */; };
 		BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94275B1629188D00EF55A0 /* NetworkManager.m */; };
@@ -66,19 +68,21 @@
 		6DA47EB71629166300C9F127 /* Dot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dot.m; sourceTree = "<group>"; };
 		6DA47EB916291C8100C9F127 /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
 		6DA47EBA16291C8200C9F127 /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
-		6DA47EC81629601300C9F127 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "images/background@2x.png"; sourceTree = "<group>"; };
-		6DA47EC91629601300C9F127 /* button-chord-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-off@2x.png"; path = "images/button-chord-off@2x.png"; sourceTree = "<group>"; };
-		6DA47ECA1629601300C9F127 /* button-chord-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-on@2x.png"; path = "images/button-chord-on@2x.png"; sourceTree = "<group>"; };
-		6DA47ECB1629601300C9F127 /* button-host@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-host@2x.png"; path = "images/button-host@2x.png"; sourceTree = "<group>"; };
-		6DA47ECC1629601300C9F127 /* button-strum-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-strum-off@2x.png"; path = "images/button-strum-off@2x.png"; sourceTree = "<group>"; };
-		6DA47ECD1629601300C9F127 /* button-strum-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-strum-on@2x.png"; path = "images/button-strum-on@2x.png"; sourceTree = "<group>"; };
-		6DA47ECE1629601300C9F127 /* guitarguy-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guitarguy-off@2x.png"; path = "images/guitarguy-off@2x.png"; sourceTree = "<group>"; };
-		6DA47ECF1629601300C9F127 /* guitarguy-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guitarguy-on@2x.png"; path = "images/guitarguy-on@2x.png"; sourceTree = "<group>"; };
-		6DA47ED01629601300C9F127 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "images/logo@2x.png"; sourceTree = "<group>"; };
+		BE164FF41629703B008A5BCD /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "images/background@2x.png"; sourceTree = "<group>"; };
+		BE164FF51629703B008A5BCD /* button-chord-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-off@2x.png"; path = "images/button-chord-off@2x.png"; sourceTree = "<group>"; };
+		BE164FF61629703B008A5BCD /* button-chord-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-on@2x.png"; path = "images/button-chord-on@2x.png"; sourceTree = "<group>"; };
+		BE164FF71629703B008A5BCD /* button-host@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-host@2x.png"; path = "images/button-host@2x.png"; sourceTree = "<group>"; };
+		BE164FF81629703B008A5BCD /* button-strum-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-strum-off@2x.png"; path = "images/button-strum-off@2x.png"; sourceTree = "<group>"; };
+		BE164FF91629703B008A5BCD /* button-strum-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-strum-on@2x.png"; path = "images/button-strum-on@2x.png"; sourceTree = "<group>"; };
+		BE164FFA1629703B008A5BCD /* guitarguy-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guitarguy-off@2x.png"; path = "images/guitarguy-off@2x.png"; sourceTree = "<group>"; };
+		BE164FFB1629703B008A5BCD /* guitarguy-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guitarguy-on@2x.png"; path = "images/guitarguy-on@2x.png"; sourceTree = "<group>"; };
+		BE164FFC1629703B008A5BCD /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "images/logo@2x.png"; sourceTree = "<group>"; };
 		BE8E8A7616293C510004EEE2 /* Controllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controllers.h; sourceTree = "<group>"; };
 		BE8E8A7716293C510004EEE2 /* Controllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controllers.m; sourceTree = "<group>"; };
 		BE8E8A82162950D60004EEE2 /* TransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionController.h; sourceTree = "<group>"; };
 		BE8E8A83162950D60004EEE2 /* TransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionController.m; sourceTree = "<group>"; };
+		BE8E8A86162965FB0004EEE2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BE8E8A89162966740004EEE2 /* gangnam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gangnam.mp3; sourceTree = "<group>"; };
 		BE9427541629159F00EF55A0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		BE9427551629159F00EF55A0 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		BE9427561629159F00EF55A0 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8E8A87162965FB0004EEE2 /* AVFoundation.framework in Frameworks */,
 				BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */,
 				6DA47E831628FD4400C9F127 /* UIKit.framework in Frameworks */,
 				6DA47E851628FD4400C9F127 /* Foundation.framework in Frameworks */,
@@ -122,6 +127,7 @@
 		6DA47E811628FD4400C9F127 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE8E8A86162965FB0004EEE2 /* AVFoundation.framework */,
 				BE94275D162918A200EF55A0 /* GameKit.framework */,
 				6DA47E821628FD4400C9F127 /* UIKit.framework */,
 				6DA47E841628FD4400C9F127 /* Foundation.framework */,
@@ -133,6 +139,7 @@
 		6DA47E881628FD4400C9F127 /* FaceGuitar */ = {
 			isa = PBXGroup;
 			children = (
+				BE8E8A88162966650004EEE2 /* Resources */,
 				BE8E8A82162950D60004EEE2 /* TransitionController.h */,
 				BE8E8A83162950D60004EEE2 /* TransitionController.m */,
 				BE9427541629159F00EF55A0 /* MainMenuViewController.h */,
@@ -156,7 +163,6 @@
 				6DA47EAE162903D800C9F127 /* Column.m */,
 				6DA47EB61629166200C9F127 /* Dot.h */,
 				6DA47EB71629166300C9F127 /* Dot.m */,
-				6DA47EDB1629601F00C9F127 /* images */,
 				6DA47E891628FD4400C9F127 /* Supporting Files */,
 				BE94275A1629188D00EF55A0 /* NetworkManager.h */,
 				BE94275B1629188D00EF55A0 /* NetworkManager.m */,
@@ -177,20 +183,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6DA47EDB1629601F00C9F127 /* images */ = {
+		BE8E8A88162966650004EEE2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6DA47EC81629601300C9F127 /* background@2x.png */,
-				6DA47EC91629601300C9F127 /* button-chord-off@2x.png */,
-				6DA47ECA1629601300C9F127 /* button-chord-on@2x.png */,
-				6DA47ECB1629601300C9F127 /* button-host@2x.png */,
-				6DA47ECC1629601300C9F127 /* button-strum-off@2x.png */,
-				6DA47ECD1629601300C9F127 /* button-strum-on@2x.png */,
-				6DA47ECE1629601300C9F127 /* guitarguy-off@2x.png */,
-				6DA47ECF1629601300C9F127 /* guitarguy-on@2x.png */,
-				6DA47ED01629601300C9F127 /* logo@2x.png */,
+				BE164FF41629703B008A5BCD /* background@2x.png */,
+				BE164FF51629703B008A5BCD /* button-chord-off@2x.png */,
+				BE164FF61629703B008A5BCD /* button-chord-on@2x.png */,
+				BE164FF71629703B008A5BCD /* button-host@2x.png */,
+				BE164FF81629703B008A5BCD /* button-strum-off@2x.png */,
+				BE164FF91629703B008A5BCD /* button-strum-on@2x.png */,
+				BE164FFA1629703B008A5BCD /* guitarguy-off@2x.png */,
+				BE164FFB1629703B008A5BCD /* guitarguy-on@2x.png */,
+				BE164FFC1629703B008A5BCD /* logo@2x.png */,
+				BE8E8A89162966740004EEE2 /* gangnam.mp3 */,
 			);
-			name = images;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,15 +256,16 @@
 				6DA47EA31628FE6200C9F127 /* PlayViewController.xib in Resources */,
 				6DA47EA8162900F400C9F127 /* FacesViewController.xib in Resources */,
 				BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */,
-				6DA47ED11629601300C9F127 /* background@2x.png in Resources */,
-				6DA47ED21629601300C9F127 /* button-chord-off@2x.png in Resources */,
-				6DA47ED31629601300C9F127 /* button-chord-on@2x.png in Resources */,
-				6DA47ED41629601300C9F127 /* button-host@2x.png in Resources */,
-				6DA47ED51629601300C9F127 /* button-strum-off@2x.png in Resources */,
-				6DA47ED61629601300C9F127 /* button-strum-on@2x.png in Resources */,
-				6DA47ED71629601300C9F127 /* guitarguy-off@2x.png in Resources */,
-				6DA47ED81629601300C9F127 /* guitarguy-on@2x.png in Resources */,
-				6DA47ED91629601300C9F127 /* logo@2x.png in Resources */,
+				BE8E8A8A162966740004EEE2 /* gangnam.mp3 in Resources */,
+				BE164FFD1629703B008A5BCD /* background@2x.png in Resources */,
+				BE164FFE1629703B008A5BCD /* button-chord-off@2x.png in Resources */,
+				BE164FFF1629703B008A5BCD /* button-chord-on@2x.png in Resources */,
+				BE1650001629703B008A5BCD /* button-host@2x.png in Resources */,
+				BE1650011629703B008A5BCD /* button-strum-off@2x.png in Resources */,
+				BE1650021629703B008A5BCD /* button-strum-on@2x.png in Resources */,
+				BE1650031629703B008A5BCD /* guitarguy-off@2x.png in Resources */,
+				BE1650041629703B008A5BCD /* guitarguy-on@2x.png in Resources */,
+				BE1650051629703B008A5BCD /* logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -136,7 +136,7 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
         case kNetworkConnected:
         {
             UIImage *guitarImage = [UIImage imageNamed:@"guitarguy-on@2x.png"];
-            [self.hostGameBtn setImage:guitarImage forState:UIControlStateNormal];
+            [guitarGuy setImage:guitarImage forState:UIControlStateNormal];
             self.connectMessageLabel.text = @"All controllers connected";
             self.connectIndicatorView.hidden = YES;
         }
