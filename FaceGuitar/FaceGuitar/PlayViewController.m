@@ -9,99 +9,9 @@
 #import "PlayViewController.h"
 #import "Controllers.h"
 #import <AVFoundation/AVFoundation.h>
+#import "AppDelegate.h"
 
-int demo[88][4] = { { 1, 0, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 0, 0, 1 },
-    { 1, 0, 0, 0 },
-    { 0, 0, 1, 0 },
-    { 0, 1, 0, 0 },
-    { 1, 0, 0, 0 },
-    { 1, 0, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 0, 0, 1 },
-    { 1, 0, 0, 0 },
-    { 0, 0, 1, 0 },
-    { 0, 1, 0, 0 },
-    { 1, 0, 0, 0 },
-    { 1, 0, 0, 0 },
-    { 0, 1, 1, 0 },
-    { 0, 1, 1, 0 },
-    { 0, 0, 0, 1 },
-    { 1, 0, 0, 0 },
-    { 0, 0, 1, 0 },
-    { 0, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 0, 0, 0 },
-    { 0, 1, 1, 0 },
-    { 0, 1, 1, 0 },
-    { 0, 0, 0, 1 },
-    { 1, 0, 0, 0 },
-    { 0, 0, 1, 0 },
-    { 0, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 0, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 0, 0, 1 },
-    { 1, 0, 0, 0 },
-    { 0, 0, 1, 0 },
-    { 0, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 0, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 0, 0, 1 },
-    { 0, 1, 1, 0 },
-    { 0, 1, 1, 0 },
-    { 1, 1, 1, 0 },
-    { 1, 1, 1, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 0, 0, 1, 1 },
-    { 0, 0, 1, 1 },
-    { 0, 0, 1, 1 },
-    { 0, 0, 1, 1 },
-    { 1, 0, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 0, 0, 1 },
-    { 1, 0, 0, 0 },
-    { 0, 0, 1, 0 },
-    { 0, 1, 0, 0 },
-    { 1, 0, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 1, 1, 0, 0 },
-    { 0, 0, 1, 1 },
-    { 0, 0, 1, 1 },
-    { 0, 0, 1, 1 },
-    { 0, 0, 1, 1 },
-    { 1, 0, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 1, 0, 0 },
-    { 0, 0, 0, 1 },
-    { 0, 1, 1, 0 },
-    { 0, 1, 1, 0 },
-    { 1, 1, 1, 0 },
-    { 1, 1, 1, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 1, 1, 1, 1 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 } };
-
-
-
-@interface PlayViewController () <ControllersDelegate> {
+@interface PlayViewController () <ControllersDelegate, UIAlertViewDelegate> {
     Column *col1;
     Column *col2;
     Column *col3;
@@ -117,6 +27,8 @@ int demo[88][4] = { { 1, 0, 0, 0 },
 @end
 
 @implementation PlayViewController
+
+@synthesize map = _map;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -246,6 +158,14 @@ int demo[88][4] = { { 1, 0, 0, 0 },
     miss.text = [NSString stringWithFormat:@"%d", [miss.text intValue]+1];
 }
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    PlayViewController *viewController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
+    viewController.map = gangnam;
+    [appDelegate.transitionController transitionToViewController:viewController withOptions:UIViewAnimationTransitionFlipFromLeft];
+}
+
 - (void)generateDots {
 //    if (arc4random() % 3 == 0) {
 //        [col1 addBlock];
@@ -259,19 +179,36 @@ int demo[88][4] = { { 1, 0, 0, 0 },
 //    if (arc4random() % 3 == 0) {
 //        [col4 addBlock];
 //    }
-    if (rowId > 88) return;
-    
-    if (demo[rowId][0]) {
-        [col1 addBlock];
+    if (rowId >= self.map.count)
+    {
+        [updateTimer invalidate];
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"Game Over" delegate:self cancelButtonTitle:@"Replay" otherButtonTitles:nil];
+        [alertView show];
     }
-    if (demo[rowId][1]) {
-        [col2 addBlock];
-    }
-    if (demo[rowId][2]) {
-        [col3 addBlock];
-    }
-    if (demo[rowId][3]) {
-        [col4 addBlock];
+    else
+    {
+        int row[4];
+        int n = [[self.map objectAtIndex:rowId] intValue];
+        
+        for (int i = 3; i >= 0; i--)
+        {
+            row[i] = n % 10;
+            n /= 10;
+        }
+        if (row[0]) {
+            [col1 addBlock];
+        }
+        if (row[1]) {
+            [col2 addBlock];
+        }
+        if (row[2]) {
+            [col3 addBlock];
+        }
+        if (row[3]) {
+            [col4 addBlock];
+        }
     }
 
     rowId++;
