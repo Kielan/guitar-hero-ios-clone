@@ -22,6 +22,7 @@ static ImagesManager *_sharedImagesManager;
 @synthesize hitText;
 @synthesize goodText;
 @synthesize greatText;
+@synthesize missText;
 
 + (ImagesManager *)sharedImagesManager {
     if (!_sharedImagesManager) {
@@ -41,6 +42,7 @@ static ImagesManager *_sharedImagesManager;
         self.hitText = [UIImage imageNamed:@"text-hit@2x.png"];
         self.goodText = [UIImage imageNamed:@"text-good@2x.png"];
         self.greatText = [UIImage imageNamed:@"text-great@2x.png"];
+        self.missText = [UIImage imageNamed:@"text-miss@2x.png"];
     }
     return self;
 }

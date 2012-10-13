@@ -31,21 +31,22 @@ static ImagesManager *imagesManager;
     NSMutableArray *toBeRemoved = [NSMutableArray array];
     for (Dot *dot in self.dotArray) {
         dot.center = CGPointMake(dot.center.x, dot.center.y + 5);
-        if (dot.center.y + 25 < 500) {
+        if (dot.center.y + 25 < 450) {
 //            dot.backgroundColor = [UIColor redColor];
             dot.state = kIdle;
-        } else if (dot.center.y + 25 < 600) {
+        } else if (dot.center.y + 25 < 550) {
             self.currHitDot = dot;
             if (dot.state == kIdle) {
 //                dot.backgroundColor = [UIColor greenColor];
                 self.active = YES;
                 dot.state = kInZone;
             }
-        } else if (dot.center.y - 25 < 700) {
+        } else if (dot.center.y - 25 < 650) {
             if (dot.state == kInZone) {
                 // this dot was missed!
                 self.active = NO;
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"miss" object:nil];
+                NSValue *value = [NSValue valueWithCGPoint:CGPointMake(self.center.x, 650)];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"miss" object:value];
                 dot.image = imagesManager.grayDot;
                 dot.state = kMiss;
             }
@@ -61,7 +62,7 @@ static ImagesManager *imagesManager;
 
 - (void)addBlock {
     Dot *dot = [[Dot alloc] init];
-    dot.frame = CGRectMake (0, 0, 50, 50);
+    dot.frame = CGRectMake (0, 0, 100, 100);
     switch (self.colour) {
         case kRed:
             dot.image = imagesManager.redDot;
