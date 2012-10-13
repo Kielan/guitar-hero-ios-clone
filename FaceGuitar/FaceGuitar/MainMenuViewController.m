@@ -88,9 +88,9 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
 }
 
 - (void)shiftButtonsUp {
-    [UIView animateWithDuration:0.65
+    [UIView animateWithDuration:0.35
                           delay:0.0
-                        options:UIViewAnimationOptionCurveEaseIn
+                        options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          chordIV.center = CGPointMake(chordIV.center.x, chordIV.center.y - 500);
                          strumIV.center = CGPointMake(strumIV.center.x, strumIV.center.y - 500);
@@ -198,13 +198,6 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
             if (networkManager.tapControllerPeerID && networkManager.tunesControllerPeerID)
             {
                 self.networkStatus = kNetworkConnected;
-                NSUInteger i = 0;
-                
-                [networkManager sendDataToControllers:[NSData dataWithBytes:&i length:sizeof(i)] dataMode:GKSendDataReliable];
-                
-                PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
-                AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-                [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];
             }
         }
             break;
@@ -224,6 +217,17 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
         default:
             break;
     }
+}
+
+- (IBAction)startGame:(id)sender {
+    
+    NSUInteger i = 0;
+    NetworkManager *networkManager = [NetworkManager sharedNetworkManager];
+    [networkManager sendDataToControllers:[NSData dataWithBytes:&i length:sizeof(i)] dataMode:GKSendDataReliable];
+    
+    PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];
 }
 
 - (void)session:(GKSession *)session didReceiveConnectionRequestFromPeer:(NSString *)peerID
