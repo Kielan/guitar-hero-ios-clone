@@ -19,9 +19,18 @@ static NSString * const TapGKSessionID = @"Tap";
 static NSString * const TunesGKSessionID = @"Tunes";
 static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
 
-@interface MainMenuViewController () <GKSessionDelegate>
+@interface MainMenuViewController () <GKSessionDelegate> {
+
+    IBOutlet UIImageView *chordIV;
+    IBOutlet UIImageView *strumIV;
+    IBOutlet UIButton *guitarGuy;
+    IBOutlet UIImageView *logo;
+    
+}
 
 @property (nonatomic, assign) NetworkStatus networkStatus;
+
+
 
 @end
 
@@ -46,10 +55,49 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self shiftButtonsDown];
+    logo.transform = CGAffineTransformMakeScale(0.1f, 0.1f);
     self.connectIndicatorView.hidden = YES;
     self.connectMessageLabel.hidden = YES;
     self.connectTapMessageLabel.hidden = YES;
     self.connectTunesMessageLabel.hidden = YES;
+    [UIView animateWithDuration:0.65
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         logo.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+                     }
+                     completion:^(BOOL finished){
+                         [UIView animateWithDuration:0.35
+                                               delay:0.0
+                                             options:UIViewAnimationOptionCurveEaseOut
+                                          animations:^{
+                                              self.hostGameBtn.center = CGPointMake(self.hostGameBtn.center.x, self.hostGameBtn.center.y - 500);
+                                          }
+                                          completion:^(BOOL finished){
+                                          }];
+                     }];
+}
+
+- (void)shiftButtonsDown {
+    
+    self.hostGameBtn.center = CGPointMake(self.hostGameBtn.center.x, self.hostGameBtn.center.y + 500);
+    chordIV.center = CGPointMake(chordIV.center.x, chordIV.center.y + 500);
+    strumIV.center = CGPointMake(strumIV.center.x, strumIV.center.y + 500);
+    guitarGuy.center = CGPointMake(guitarGuy.center.x, guitarGuy.center.y + 500);
+}
+
+- (void)shiftButtonsUp {
+    [UIView animateWithDuration:0.35
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         chordIV.center = CGPointMake(chordIV.center.x, chordIV.center.y - 500);
+                         strumIV.center = CGPointMake(strumIV.center.x, strumIV.center.y - 500);
+                         guitarGuy.center = CGPointMake(guitarGuy.center.x, guitarGuy.center.y - 500);
+                     }
+                     completion:^(BOOL finished){
+                     }];
 }
 
 - (void)viewDidUnload
@@ -73,21 +121,25 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
             break;
             
         case kNetworkConnecting:
-            self.hostGameBtn.enabled = NO;
+            self.hostGameBtn.hidden = YES;
             self.connectIndicatorView.hidden = NO;
             self.connectMessageLabel.hidden = NO;
             self.connectTapMessageLabel.hidden = NO;
             self.connectTunesMessageLabel.hidden = NO;
             
             [self.connectIndicatorView startAnimating];
-            self.connectMessageLabel.text = @"Waiting for devices";
-            self.connectTapMessageLabel.text = @"Waiting for tap controller";
-            self.connectTunesMessageLabel.text = @"Waiting for tune controller";
+//            self.connectMessageLabel.text = @"Waiting for devices";
+//            self.connectTapMessageLabel.text = @"Waiting for tap controller";
+//            self.connectTunesMessageLabel.text = @"Waiting for tune controller";
             break;
             
         case kNetworkConnected:
+        {
+            UIImage *guitarImage = [UIImage imageNamed:@"guitarguy-on@2x.png"];
+            [guitarGuy setImage:guitarImage forState:UIControlStateNormal];
             self.connectMessageLabel.text = @"All controllers connected";
             self.connectIndicatorView.hidden = YES;
+        }
             break;
             
         default:
@@ -107,6 +159,7 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
     networkManager.gkSession.delegate = self;
     [networkManager.gkSession setDataReceiveHandler:[Controllers sharedControllers] withContext:nil];
     networkManager.gkSession.available = YES;
+    [self shiftButtonsUp];
 }
 
 
@@ -129,25 +182,22 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
             NSString *peerIDName = [session displayNameForPeer:peerID];
             if (! networkManager.tapControllerPeerID && [peerIDName isEqualToString:TapGKSessionID])
             {
-                self.connectTapMessageLabel.text = @"Tap Controller connected";
-                networkManager.tapControllerPeerID = peerID;   
+                UIImage *strumOn = [UIImage imageNamed:@"button-strum-on@2x.png"];
+                strumIV.image = strumOn;
+//                self.connectTapMessageLabel.text = @"Tap Controller connected";
+                networkManager.tapControllerPeerID = peerID;
             }
             else if (! networkManager.tunesControllerPeerID && [peerIDName isEqualToString:TunesGKSessionID])
             {
-                self.connectTunesMessageLabel.text = @"Tunes Controller connected";
+                UIImage *chordOn = [UIImage imageNamed:@"button-chord-on@2x.png"];
+                chordIV.image = chordOn;
+//                self.connectTunesMessageLabel.text = @"Tunes Controller connected";
                 networkManager.tunesControllerPeerID = peerID;
             }
             
             if (networkManager.tapControllerPeerID && networkManager.tunesControllerPeerID)
             {
                 self.networkStatus = kNetworkConnected;
-                NSUInteger i = 0;
-                
-                [networkManager sendDataToControllers:[NSData dataWithBytes:&i length:sizeof(i)] dataMode:GKSendDataReliable];
-                
-                PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
-                AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-                [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];
             }
         }
             break;
@@ -167,6 +217,17 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
         default:
             break;
     }
+}
+
+- (IBAction)startGame:(id)sender {
+    
+    NSUInteger i = 0;
+    NetworkManager *networkManager = [NetworkManager sharedNetworkManager];
+    [networkManager sendDataToControllers:[NSData dataWithBytes:&i length:sizeof(i)] dataMode:GKSendDataReliable];
+    
+    PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];
 }
 
 - (void)session:(GKSession *)session didReceiveConnectionRequestFromPeer:(NSString *)peerID

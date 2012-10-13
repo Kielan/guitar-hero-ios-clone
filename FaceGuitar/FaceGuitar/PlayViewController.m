@@ -8,6 +8,98 @@
 
 #import "PlayViewController.h"
 #import "Controllers.h"
+#import <AVFoundation/AVFoundation.h>
+
+int demo[88][4] = { { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 0, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 0, 1, 0 },
+    { 0, 1, 0, 0 },
+    { 1, 0, 0, 0 },
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 0, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 0, 1, 0 },
+    { 0, 1, 0, 0 },
+    { 1, 0, 0, 0 },
+    { 1, 0, 0, 0 },
+    { 0, 1, 1, 0 },
+    { 0, 1, 1, 0 },
+    { 0, 0, 0, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 0, 1, 0 },
+    { 0, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 0, 0, 0 },
+    { 0, 1, 1, 0 },
+    { 0, 1, 1, 0 },
+    { 0, 0, 0, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 0, 1, 0 },
+    { 0, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 0, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 0, 1, 0 },
+    { 0, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 0, 1 },
+    { 0, 1, 1, 0 },
+    { 0, 1, 1, 0 },
+    { 1, 1, 1, 0 },
+    { 1, 1, 1, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 0, 0, 1, 1 },
+    { 0, 0, 1, 1 },
+    { 0, 0, 1, 1 },
+    { 0, 0, 1, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 0, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 0, 1, 0 },
+    { 0, 1, 0, 0 },
+    { 1, 0, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 1, 1, 0, 0 },
+    { 0, 0, 1, 1 },
+    { 0, 0, 1, 1 },
+    { 0, 0, 1, 1 },
+    { 0, 0, 1, 1 },
+    { 1, 0, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 1, 0, 0 },
+    { 0, 0, 0, 1 },
+    { 0, 1, 1, 0 },
+    { 0, 1, 1, 0 },
+    { 1, 1, 1, 0 },
+    { 1, 1, 1, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 1, 1, 1, 1 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 } };
+
+
 
 @interface PlayViewController () <ControllersDelegate> {
     Column *col1;
@@ -18,6 +110,8 @@
     int counter;
     IBOutlet UILabel *hit;
     IBOutlet UILabel *miss;
+    int rowId;
+    AVAudioPlayer* audioPlayer;
 }
 
 @end
@@ -38,6 +132,7 @@
     [super viewDidLoad];
     
     counter = 0;
+    rowId = 0;
     
     col1 = [[Column alloc] init];
     col1.frame = CGRectMake(0, 0, 120, 600);
@@ -62,13 +157,19 @@
     col4.center = CGPointMake(820, 420);
     col4.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:col4];
+    
+    NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"gangnam" ofType:@"mp3"]];
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:nil];
+    [audioPlayer prepareToPlay];
 
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/30.0f
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f
                                                    target:self
                                                  selector:@selector(updateColumns)
                                                  userInfo:nil
                                                   repeats:YES];
     [updateTimer fire];
+    [audioPlayer play];
     // Do any additional setup after loading the view from its nib.
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -81,8 +182,10 @@
                                                object:nil];
 }
 
-- (IBAction)press:(id)sender {
-    int number = ((UIButton*)sender).tag;
+
+- (void)buttonPressedWithNumber:(int)number
+{
+    
     switch (number) {
         case 1:
             if (col1.active) {
@@ -130,6 +233,11 @@
     }
 }
 
+- (IBAction)press:(id)sender {
+    int number = ((UIButton*)sender).tag;
+    [self buttonPressedWithNumber:number];
+}
+
 - (void)updateHitCount {
     hit.text = [NSString stringWithFormat:@"%d", [hit.text intValue]+1];
 }
@@ -139,23 +247,39 @@
 }
 
 - (void)generateDots {
-    if (arc4random() % 3 == 0) {
+//    if (arc4random() % 3 == 0) {
+//        [col1 addBlock];
+//    }
+//    if (arc4random() % 3 == 0) {
+//        [col2 addBlock];
+//    }
+//    if (arc4random() % 3 == 0) {
+//        [col3 addBlock];
+//    }
+//    if (arc4random() % 3 == 0) {
+//        [col4 addBlock];
+//    }
+    if (rowId > 88) return;
+    
+    if (demo[rowId][0]) {
         [col1 addBlock];
     }
-    if (arc4random() % 3 == 0) {
+    if (demo[rowId][1]) {
         [col2 addBlock];
     }
-    if (arc4random() % 3 == 0) {
+    if (demo[rowId][2]) {
         [col3 addBlock];
     }
-    if (arc4random() % 3 == 0) {
+    if (demo[rowId][3]) {
         [col4 addBlock];
     }
+
+    rowId++;
 }
 
 - (void)updateColumns {
     counter++;
-    if (counter == 30) {
+    if (counter >= 0.45f * 60.0f) {
         [self generateDots];
         counter = 0;
     }
@@ -202,33 +326,17 @@
 
 - (void)controllers:(Controllers *)controllers didChangeButtonStateButtonType:(ControllerButtonType)buttonType newButtonState:(ControllerButtonState)buttonState
 {
-    if (buttonType == kButtonTap)
+    if (buttonType == kButtonTap && (buttonState == kButtonPressed || buttonState == kButtonJustPressed))
     {
         TunesController *tunesController = [Controllers sharedControllers].tunesController;
         if (tunesController.aButtonState == kButtonPressed || tunesController.aButtonState == kButtonJustPressed)
-        {
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.tag = 1;
-            [self press:button];
-        }
+            [self buttonPressedWithNumber:4];
         if (tunesController.bButtonState == kButtonPressed || tunesController.bButtonState == kButtonJustPressed)
-        {
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.tag = 2;
-            [self press:button];
-        }
+            [self buttonPressedWithNumber:3];
         if (tunesController.xButtonState == kButtonPressed || tunesController.xButtonState == kButtonJustPressed)
-        {
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.tag = 3;
-            [self press:button];
-        }
+            [self buttonPressedWithNumber:2];
         if (tunesController.yButtonState == kButtonPressed || tunesController.yButtonState == kButtonJustPressed)
-        {
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.tag = 4;
-            [self press:button];
-        }
+            [self buttonPressedWithNumber:1];
     }
 }
 
