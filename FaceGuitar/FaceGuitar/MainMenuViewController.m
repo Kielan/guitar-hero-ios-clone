@@ -105,6 +105,12 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
                      completion:^(BOOL finished){
                      }];
 }
+
+
+- (IBAction)cancelBtn:(id)sender {
+    
+}
+
 - (IBAction)LoginBtnPressed:(id)sender {
     if ([[FacebookManager sharedInstance] isOpen]){
         [[FacebookManager sharedInstance] logout];
