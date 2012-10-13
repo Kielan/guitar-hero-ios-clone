@@ -46,6 +46,8 @@ static ImagesManager *imagesManager;
 {
     [super viewDidLoad];
     
+    imagesManager = [ImagesManager sharedImagesManager];
+    
     counter = 0;
     rowId = 0;
     
@@ -128,7 +130,9 @@ static ImagesManager *imagesManager;
                          text.alpha = 0.0;
                      }
                      completion:^(BOOL finished){
-                         [text removeFromSuperview];
+                         if (finished) {
+                             [text removeFromSuperview];
+                         }
                      }];
 }
 
