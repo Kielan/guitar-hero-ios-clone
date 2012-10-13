@@ -23,6 +23,7 @@ static ImagesManager *imagesManager;
     int counter;
     IBOutlet UILabel *hit;
     IBOutlet UILabel *miss;
+    IBOutlet UIImageView *btmBar;
     int rowId;
     AVAudioPlayer* audioPlayer;
 }
@@ -52,42 +53,43 @@ static ImagesManager *imagesManager;
     
     counter = 0;
     rowId = 0;
-    
+    CGFloat alpha = 0.0f;
     col1 = [[Column alloc] init];
     col1.frame = CGRectMake(0, 0, 120, 500);
-    col1.center = CGPointMake(204, 370);
-    col1.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    col1.center = CGPointMake(204, 470);
+    col1.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:alpha];
     col1.colour = kRed;
     [self.view addSubview:col1];
     
     col2 = [[Column alloc] init];
     col2.frame = CGRectMake(0, 0, 120, 500);
-    col2.center = CGPointMake(410, 370);
-    col2.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    col2.center = CGPointMake(410, 470);
+    col2.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:alpha];
     col2.colour = kGreen;
     [self.view addSubview:col2];
     
     col3 = [[Column alloc] init];
     col3.frame = CGRectMake(0, 0, 120, 500);
-    col3.center = CGPointMake(614, 370);
-    col3.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    col3.center = CGPointMake(614, 470);
+    col3.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:alpha];
     col3.colour = kBlue;
     [self.view addSubview:col3];
     
     col4 = [[Column alloc] init];
     col4.frame = CGRectMake(0, 0, 120, 500);
-    col4.center = CGPointMake(820, 370);
-    col4.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    col4.center = CGPointMake(820, 470);
+    col4.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:alpha];
     col4.colour = kYellow;
     [self.view addSubview:col4];
     
     NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:self.song.mp3File ofType:@"mp3"]];
-    
+    NSLog(@"file: %@", file);
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:nil];
     [audioPlayer prepareToPlay];
+    NSLog(@"audiop: %@", audioPlayer);
 
     // Do any additional setup after loading the view from its nib.
-    
+    [self.view addSubview:btmBar];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateHitCount)
                                                  name:@"hit"
@@ -146,7 +148,7 @@ static ImagesManager *imagesManager;
                                                                                                                             userInfo:nil
                                                                                                                              repeats:YES];
                                                                                [updateTimer fire];
-                                                                               [audioPlayer play];
+                                                                                   [audioPlayer play];
                                                                            }
                                                                        }];
                                                   }
@@ -201,7 +203,7 @@ static ImagesManager *imagesManager;
                 col1.currHitDot.state = kHit;
                 col1.active = NO;
                 [self updateHitCount];
-                [self showHitTextAtLocation:CGPointMake(col1.center.x, col1.frame.origin.y + 500) andType:(arc4random()%3)];
+                [self showHitTextAtLocation:CGPointMake(col1.center.x, col1.frame.origin.y + 450) andType:(arc4random()%3)];
                 [UIView animateWithDuration:0.35
                                       delay:0.0
                                     options:UIViewAnimationOptionCurveLinear
@@ -220,7 +222,7 @@ static ImagesManager *imagesManager;
                 col2.currHitDot.state = kHit;
                 col2.active = NO;
                 [self updateHitCount];
-                [self showHitTextAtLocation:CGPointMake(col2.center.x, col2.frame.origin.y + 500)
+                [self showHitTextAtLocation:CGPointMake(col2.center.x, col2.frame.origin.y + 450)
                  andType:(arc4random()%3)];
                 [UIView animateWithDuration:0.35
                                       delay:0.0
@@ -240,7 +242,7 @@ static ImagesManager *imagesManager;
                 col3.currHitDot.state = kHit;
                 col3.active = NO;
                 [self updateHitCount];
-                [self showHitTextAtLocation:CGPointMake(col3.center.x, col3.frame.origin.y + 500)
+                [self showHitTextAtLocation:CGPointMake(col3.center.x, col3.frame.origin.y + 450)
                  andType:(arc4random()%3)];
                 [UIView animateWithDuration:0.35
                                       delay:0.0
@@ -260,7 +262,7 @@ static ImagesManager *imagesManager;
                 col4.currHitDot.state = kHit;
                 col4.active = NO;
                 [self updateHitCount];
-                [self showHitTextAtLocation:CGPointMake(col4.center.x, col4.frame.origin.y + 500)
+                [self showHitTextAtLocation:CGPointMake(col4.center.x, col4.frame.origin.y + 450)
                  andType:(arc4random()%3)];
                 [UIView animateWithDuration:0.35
                                       delay:0.0
