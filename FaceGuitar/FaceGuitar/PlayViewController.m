@@ -20,7 +20,7 @@ static ImagesManager *imagesManager;
     Column *col3;
     Column *col4;
     NSTimer *updateTimer;
-    int counter;
+    NSTimer *beatTimer;
     IBOutlet UILabel *hit;
     IBOutlet UILabel *miss;
     int rowId;
@@ -48,7 +48,6 @@ static ImagesManager *imagesManager;
 {
     [super viewDidLoad];
     
-    counter = 0;
     rowId = 0;
     
     col1 = [[Column alloc] init];
@@ -84,13 +83,19 @@ static ImagesManager *imagesManager;
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:nil];
     [audioPlayer prepareToPlay];
 
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval:self.song.beatInterval / 30.0f
                                                    target:self
                                                  selector:@selector(updateColumns)
                                                  userInfo:nil
                                                   repeats:YES];
     [updateTimer fire];
-    [audioPlayer play];
+    beatTimer = [NSTimer scheduledTimerWithTimeInterval:self.song.beatInterval
+                                                 target:self
+                                               selector:@selector(generateDots)
+                                               userInfo:nil
+                                                repeats:YES];
+    [beatTimer fire];
+    [audioPlayer playAtTime:audioPlayer.deviceCurrentTime + 0.75f];
     // Do any additional setup after loading the view from its nib.
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -255,6 +260,7 @@ static ImagesManager *imagesManager;
     if (rowId >= self.song.notes.count)
     {
         [updateTimer invalidate];
+        [beatTimer invalidate];
         [[NSNotificationCenter defaultCenter] removeObserver:self];
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Game Over"
@@ -292,11 +298,6 @@ static ImagesManager *imagesManager;
 }
 
 - (void)updateColumns {
-    counter++;
-    if (counter >= 0.45f * 60.0f) {
-        [self generateDots];
-        counter = 0;
-    }
     [col1 update];
     [col2 update];
     [col3 update];
@@ -335,6 +336,7 @@ static ImagesManager *imagesManager;
 
 - (IBAction)restart:(id)sender {
     [updateTimer invalidate];
+    [beatTimer invalidate];
     [audioPlayer stop];
     
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
