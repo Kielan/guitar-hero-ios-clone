@@ -69,6 +69,7 @@
 		EFC0B9CB16299A750087B697 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9CA16299A750087B697 /* MapKit.framework */; };
 		EFC0B9CD16299A7C0087B697 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9CC16299A7C0087B697 /* ImageIO.framework */; };
 		EFC0B9DF16299CFF0087B697 /* libSDWebImageARC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9DA16299CC20087B697 /* libSDWebImageARC.a */; };
+		EFC0B9FB162A041A0087B697 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9FA162A041A0087B697 /* QuartzCore.framework */; };
 		EFF31F7216296DD500074395 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF31F7016296DD500074395 /* Accounts.framework */; };
 		EFF31F7316296DD500074395 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF31F7116296DD500074395 /* AdSupport.framework */; };
 		EFF31F7616296E2700074395 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF31F7516296E2700074395 /* Social.framework */; };
@@ -190,6 +191,7 @@
 		EFC0B9CA16299A750087B697 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EFC0B9CC16299A7C0087B697 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EFC0B9CE16299CC10087B697 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = SDWebImage/SDWebImage.xcodeproj; sourceTree = "<group>"; };
+		EFC0B9FA162A041A0087B697 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EFF31F7016296DD500074395 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		EFF31F7116296DD500074395 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EFF31F7516296E2700074395 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -205,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC0B9FB162A041A0087B697 /* QuartzCore.framework in Frameworks */,
 				EFC0B9DF16299CFF0087B697 /* libSDWebImageARC.a in Frameworks */,
 				EFC0B9CD16299A7C0087B697 /* ImageIO.framework in Frameworks */,
 				EFC0B9CB16299A750087B697 /* MapKit.framework in Frameworks */,
@@ -244,6 +247,7 @@
 		6DA47E811628FD4400C9F127 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFC0B9FA162A041A0087B697 /* QuartzCore.framework */,
 				EFC0B9CC16299A7C0087B697 /* ImageIO.framework */,
 				EFC0B9CA16299A750087B697 /* MapKit.framework */,
 				EFF31F7C16296F7A00074395 /* FacebookSDKResources.bundle */,

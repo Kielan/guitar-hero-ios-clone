@@ -9,6 +9,7 @@
 #import "PlayViewController.h"
 #import "Controllers.h"
 #import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 #import "ImagesManager.h"
 #import "FacebookManager.h"
@@ -31,6 +32,7 @@ static ImagesManager *imagesManager;
     int rowId;
     AVAudioPlayer* audioPlayer;
     int friendIndex;
+    CGFloat curYloc;
 }
 
 - (IBAction)restart:(id)sender;
@@ -96,6 +98,9 @@ static ImagesManager *imagesManager;
 
     // Do any additional setup after loading the view from its nib.
     [self.view addSubview:btmBar];
+    [self.view addSubview:scrollView];
+    curYloc = 0;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateHitCount)
                                                  name:@"hit"
@@ -109,6 +114,50 @@ static ImagesManager *imagesManager;
 
 - (IBAction)addFriend:(id)sender {
     Friend *friend = friends[friendIndex++];
+    UIView *view = [[UIView alloc]  initWithFrame:CGRectMake(0, 0, 600, 50)];
+    UIImageView *profile = friend.imgView;
+    profile.frame = CGRectMake(5, 5, 40, 40);
+    profile.layer.cornerRadius = 5;
+    profile.layer.masksToBounds = YES;
+    [view addSubview:profile];
+    UILabel *whereLabel = [[UILabel alloc] init];
+    
+    switch (arc4random()%6) {
+        case 0:
+            whereLabel.text = [NSString stringWithFormat:@"You are rocking the house with %@!", friend.name];
+            break;
+        case 1:
+            whereLabel.text = [NSString stringWithFormat:@"%@ is watching your concert!", friend.name];
+            break;
+        case 2:
+            whereLabel.text = [NSString stringWithFormat:@"%@ is awed by your amazing skills!", friend.name];
+            break;
+        case 3:
+            whereLabel.text = [NSString stringWithFormat:@"%@ thinks you are awesome!", friend.name];
+            break;
+        case 4:
+            whereLabel.text = [NSString stringWithFormat:@"%@ says: 'You should do this for a living!'", friend.name];
+            break;
+        case 5:
+            whereLabel.text = [NSString stringWithFormat:@"%@ is dancing away to the beat!'", friend.name];
+            break;
+        default:
+            break;
+    }
+    
+    whereLabel.backgroundColor = [UIColor clearColor];
+    whereLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:22];
+    whereLabel.textColor = [UIColor blackColor];
+    whereLabel.frame = CGRectMake(60, 5, 500, 40);
+    [view addSubview:whereLabel];
+    [scrollView addSubview:view];
+    view.frame = CGRectMake(0, curYloc, view.frame.size.width, view.frame.size.height);
+    curYloc += 50;
+    scrollView.contentSize = CGSizeMake(600, curYloc);
+    NSLog(NSStringFromCGSize(scrollView.contentSize));
+    if (scrollView.contentSize.height > 200) {
+        [scrollView scrollRectToVisible:CGRectMake(0, scrollView.contentSize.height - 200, 600, 200) animated:YES];
+    }
     NSLog(@"%@ came to watch your performance.", friend.name);
 }
 
@@ -122,7 +171,7 @@ static ImagesManager *imagesManager;
     num2.center = center;
     num3.center = center;
     [self.view addSubview:num3];
-    [UIView animateWithDuration:1.0
+    [UIView animateWithDuration:0.8
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
@@ -133,7 +182,7 @@ static ImagesManager *imagesManager;
                          [num3 removeFromSuperview];
                          if (finished) {
                              [self.view addSubview:num2];
-                             [UIView animateWithDuration:0.5
+                             [UIView animateWithDuration:0.8
                                                    delay:0.0
                                                  options:UIViewAnimationOptionCurveEaseInOut
                                               animations:^{
@@ -143,7 +192,7 @@ static ImagesManager *imagesManager;
                                               completion:^(BOOL finished){
                                                   if (finished) {
                                                       [self.view addSubview:num1];
-                                                      [UIView animateWithDuration:0.7
+                                                      [UIView animateWithDuration:0.8
                                                                             delay:0.0
                                                                           options:UIViewAnimationOptionCurveEaseOut
                                                                        animations:^{

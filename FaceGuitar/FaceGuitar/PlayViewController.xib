@@ -59,9 +59,8 @@
 						<string key="NSFrame">{{0, 645}, {1024, 75}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
+						<object class="NSColor" key="IBUIBackgroundColor" id="981853065">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
@@ -138,7 +137,7 @@
 						<string key="NSFrame">{{882, 20}, {106, 55}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="361487544"/>
+						<reference key="NSNextKeyView" ref="137229943"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -332,7 +331,7 @@
 						<string key="NSFrame">{{211, 20}, {100, 50}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="130999470"/>
+						<reference key="NSNextKeyView" ref="24049240"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -347,19 +346,20 @@
 						<reference key="IBUIFontDescription" ref="529147608"/>
 						<reference key="IBUIFont" ref="473407364"/>
 					</object>
-					<object class="IBUIScrollView" id="361487544">
+					<object class="IBUIScrollView" id="137229943">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{252, 132}, {616, 306}}</string>
+						<string key="NSFrame">{{212, 104.5}, {600, 200}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="39465590"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<reference key="IBUIBackgroundColor" ref="981853065"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
-					<object class="IBUIButton" id="130999470">
+					<object class="IBUIButton" id="24049240">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{521, 37}, {54, 44}}</string>
@@ -434,6 +434,14 @@
 					<int key="connectionID">39</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">scrollView</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="137229943"/>
+					</object>
+					<int key="connectionID">43</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">press:</string>
 						<reference key="source" ref="39465590"/>
@@ -499,7 +507,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addFriend:</string>
-						<reference key="source" ref="130999470"/>
+						<reference key="source" ref="24049240"/>
 						<reference key="destination" ref="841351856"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -542,8 +550,8 @@
 							<reference ref="178433631"/>
 							<reference ref="680180822"/>
 							<reference ref="1031858399"/>
-							<reference ref="361487544"/>
-							<reference ref="130999470"/>
+							<reference ref="24049240"/>
+							<reference ref="137229943"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -614,12 +622,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">40</int>
-						<reference key="object" ref="361487544"/>
+						<reference key="object" ref="137229943"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">41</int>
-						<reference key="object" ref="130999470"/>
+						<reference key="object" ref="24049240"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</array>
@@ -650,7 +658,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">42</int>
+			<int key="maxID">43</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -661,6 +669,7 @@
 						<string key="addFriend:">id</string>
 						<string key="back:">id</string>
 						<string key="pause:">id</string>
+						<string key="press:">id</string>
 						<string key="restart:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -674,6 +683,10 @@
 						</object>
 						<object class="IBActionInfo" key="pause:">
 							<string key="name">pause:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="press:">
+							<string key="name">press:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="restart:">

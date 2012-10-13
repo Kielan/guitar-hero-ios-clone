@@ -52,6 +52,7 @@ static FacebookManager *sharedInstance = nil;
         
     }];
     [self handleDidBecomeActive];
+    
 }
 -(void)handleDidBecomeActive{
     [FBSession.activeSession handleDidBecomeActive];
