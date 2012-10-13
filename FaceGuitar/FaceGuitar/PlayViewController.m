@@ -34,6 +34,10 @@ static ImagesManager *imagesManager;
     AVAudioPlayer* audioPlayer;
     int friendIndex;
     CGFloat curYloc;
+    
+    IBOutlet UIButton *endRestartButton;
+    IBOutlet UIButton *endChangeButton;
+    IBOutlet UIImageView *endView;
 }
 
 - (IBAction)restart:(id)sender;
@@ -56,6 +60,9 @@ static ImagesManager *imagesManager;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    endChangeButton.hidden = YES;
+    endRestartButton.hidden = YES;
+    endView.hidden = YES;
     
     friends = [FacebookManager sharedInstance].friendsArray;
     friendIndex = 0;

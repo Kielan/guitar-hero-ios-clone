@@ -43,6 +43,7 @@
 		6DA47EEE16297E5400C9F127 /* yellow-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EEA16297E5400C9F127 /* yellow-dot@2x.png */; };
 		6DA47EF116297ED300C9F127 /* ImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EF016297ED200C9F127 /* ImagesManager.m */; };
 		6DA47EF3162983CE00C9F127 /* gray-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EF2162983CE00C9F127 /* gray-dot@2x.png */; };
+		6DBE6134162A1356006808C9 /* end-game.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DBE6133162A1356006808C9 /* end-game.png */; };
 		BE164FFD1629703B008A5BCD /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF41629703B008A5BCD /* background@2x.png */; };
 		BE164FFE1629703B008A5BCD /* button-chord-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF51629703B008A5BCD /* button-chord-off@2x.png */; };
 		BE164FFF1629703B008A5BCD /* button-chord-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE164FF61629703B008A5BCD /* button-chord-on@2x.png */; };
@@ -161,6 +162,7 @@
 		6DA47EEF16297ED200C9F127 /* ImagesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesManager.h; sourceTree = "<group>"; };
 		6DA47EF016297ED200C9F127 /* ImagesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesManager.m; sourceTree = "<group>"; };
 		6DA47EF2162983CE00C9F127 /* gray-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-dot@2x.png"; path = "images/gray-dot@2x.png"; sourceTree = "<group>"; };
+		6DBE6133162A1356006808C9 /* end-game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "end-game.png"; sourceTree = "<group>"; };
 		BE164FF41629703B008A5BCD /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "images/background@2x.png"; sourceTree = "<group>"; };
 		BE164FF51629703B008A5BCD /* button-chord-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-off@2x.png"; path = "images/button-chord-off@2x.png"; sourceTree = "<group>"; };
 		BE164FF61629703B008A5BCD /* button-chord-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-chord-on@2x.png"; path = "images/button-chord-on@2x.png"; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				BECE5CCE162A0B35005B1D79 /* starships.mp3 */,
+				6DBE6133162A1356006808C9 /* end-game.png */,
 				BECE5CCC162A06DE005B1D79 /* callmemaybe.mp3 */,
 				6D0F88681629E88200FD5EB2 /* good-job@2x.png */,
 				6D0F88621629E77E00FD5EB2 /* num-1@2x.png */,
@@ -505,6 +508,7 @@
 				BECE5CCD162A06DE005B1D79 /* callmemaybe.mp3 in Resources */,
 				BECE5CCF162A0B35005B1D79 /* starships.mp3 in Resources */,
 				BECE5CDC162A1066005B1D79 /* board.png in Resources */,
+				6DBE6134162A1356006808C9 /* end-game.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
