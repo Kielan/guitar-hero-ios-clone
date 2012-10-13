@@ -81,7 +81,7 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
                                               self.hostGameBtn.center = CGPointMake(self.hostGameBtn.center.x, self.hostGameBtn.center.y - 500);
                                           }
                                           completion:^(BOOL finished){
-                                              [self startGame:self];
+                                              //[self startGame:self];
                                           }];
                      }];
 }

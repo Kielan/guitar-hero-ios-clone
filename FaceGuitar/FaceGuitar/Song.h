@@ -14,13 +14,16 @@
 @property (nonatomic, readonly, strong) NSArray *notes;
 @property (nonatomic, readonly, strong) NSString *mp3File;
 @property (nonatomic, readonly, assign) NSTimeInterval beatInterval;
+@property (nonatomic, readonly, assign) NSTimeInterval playDelay;
 
 @property (nonatomic, assign) NSUInteger highScore;
 
 + (NSArray *)songs;
 + (Song *)gangnamSong;
++ (Song *)callMeMaybeSong;
++ (Song *)starShipsSong;
 
-- (id)initWithName:(NSString *)name notes:(NSArray *)notes mp3File:(NSString *)mp3File beatInterval:(NSTimeInterval)beatInterval;
+- (id)initWithName:(NSString *)name notes:(NSArray *)notes mp3File:(NSString *)mp3File beatInterval:(NSTimeInterval)beatInterval playDelay:(NSTimeInterval)playDelay;
 
 
 

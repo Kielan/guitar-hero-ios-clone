@@ -60,6 +60,8 @@
 		BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9427561629159F00EF55A0 /* MainMenuViewController.xib */; };
 		BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94275B1629188D00EF55A0 /* NetworkManager.m */; };
 		BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94275D162918A200EF55A0 /* GameKit.framework */; };
+		BECE5CCD162A06DE005B1D79 /* callmemaybe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BECE5CCC162A06DE005B1D79 /* callmemaybe.mp3 */; };
+		BECE5CCF162A0B35005B1D79 /* starships.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BECE5CCE162A0B35005B1D79 /* starships.mp3 */; };
 		BEF008441629CCDB001BD37A /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF31FA9162990C800074395 /* Friend.m */; };
 		BEF008471629D202001BD37A /* SongPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF008461629D202001BD37A /* SongPickerViewController.m */; };
 		BEF0084A1629D236001BD37A /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF008491629D236001BD37A /* Song.m */; };
@@ -178,6 +180,8 @@
 		BE94275A1629188D00EF55A0 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		BE94275B1629188D00EF55A0 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		BE94275D162918A200EF55A0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		BECE5CCC162A06DE005B1D79 /* callmemaybe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = callmemaybe.mp3; sourceTree = "<group>"; };
+		BECE5CCE162A0B35005B1D79 /* starships.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = starships.mp3; sourceTree = "<group>"; };
 		BEF008451629D202001BD37A /* SongPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPickerViewController.h; sourceTree = "<group>"; };
 		BEF008461629D202001BD37A /* SongPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPickerViewController.m; sourceTree = "<group>"; };
 		BEF008481629D236001BD37A /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 		BE8E8A88162966650004EEE2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BECE5CCE162A0B35005B1D79 /* starships.mp3 */,
+				BECE5CCC162A06DE005B1D79 /* callmemaybe.mp3 */,
 				6D0F88681629E88200FD5EB2 /* good-job@2x.png */,
 				6D0F88621629E77E00FD5EB2 /* num-1@2x.png */,
 				6D0F88631629E77E00FD5EB2 /* num-2@2x.png */,
@@ -489,6 +495,8 @@
 				6D0F88671629E77E00FD5EB2 /* num-3@2x.png in Resources */,
 				6D0F88691629E88200FD5EB2 /* good-job@2x.png in Resources */,
 				6D0F886B1629E8F200FD5EB2 /* text-miss@2x.png in Resources */,
+				BECE5CCD162A06DE005B1D79 /* callmemaybe.mp3 in Resources */,
+				BECE5CCF162A0B35005B1D79 /* starships.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

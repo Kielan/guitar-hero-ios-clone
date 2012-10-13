@@ -62,7 +62,7 @@ static ImagesManager *imagesManager;
 
 - (void)addBlock {
     Dot *dot = [[Dot alloc] init];
-    dot.frame = CGRectMake (0, 0, 100, 100);
+    dot.frame = CGRectMake (0, 0, 75, 75);
     switch (self.colour) {
         case kRed:
             dot.image = imagesManager.redDot;

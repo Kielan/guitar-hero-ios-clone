@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AppDelegate.h"
 #import "ImagesManager.h"
+#import "SongPickerViewController.h"
 
 static ImagesManager *imagesManager;
 
@@ -140,20 +141,20 @@ static ImagesManager *imagesManager;
                                                                        completion:^(BOOL finished){
                                                                            if (finished) {
                                                                                [num1 removeFromSuperview];
-                                                                               updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f
+                                                                               updateTimer = [NSTimer scheduledTimerWithTimeInterval:self.song.beatInterval / 30.0f
                                                                                                                               target:self
                                                                                                                             selector:@selector(updateColumns)
                                                                                                                             userInfo:nil
                                                                                                                              repeats:YES];
-																														beatTimer = [NSTimer scheduledTimerWithTimeInterval:self.song.beatInterval
-																													                                                 target:self
-																													                                               selector:@selector(generateDots)
-																													                                               userInfo:nil
-																													                                                repeats:YES];
-																													    [beatTimer fire];
+                                                                                beatTimer = [NSTimer scheduledTimerWithTimeInterval:self.song.beatInterval
+                                                                                                                             target:self
+                                                                                                                           selector:@selector(generateDots)
+                                                                                                                           userInfo:nil
+                                                                                                                            repeats:YES];
+                                                                                [beatTimer fire];
 
                                                                                [updateTimer fire];
-																				[audioPlayer playAtTime:audioPlayer.deviceCurrentTime + 0.75f];
+																				[audioPlayer playAtTime:audioPlayer.deviceCurrentTime + self.song.playDelay];
                                                                            }
                                                                        }];
                                                   }
@@ -394,7 +395,13 @@ static ImagesManager *imagesManager;
 }
 
 - (IBAction)back:(id)sender {
+    [updateTimer invalidate];
+    [beatTimer invalidate];
+    [audioPlayer stop];
     
+    SongPickerViewController  *songPickerController = [[SongPickerViewController alloc] init];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate.transitionController transitionToViewController:songPickerController withOptions:UIViewAnimationTransitionCurlUp];
 }
 
 - (IBAction)pause:(id)sender {
