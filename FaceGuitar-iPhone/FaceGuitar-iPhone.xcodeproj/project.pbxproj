@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE51AE56162902690038C4FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE51AE55162902690038C4FB /* UIKit.framework */; };
+		BE51AE58162902690038C4FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE51AE57162902690038C4FB /* Foundation.framework */; };
+		BE51AE5A162902690038C4FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE51AE59162902690038C4FB /* CoreGraphics.framework */; };
+		BE51AE60162902690038C4FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE5E162902690038C4FB /* InfoPlist.strings */; };
+		BE51AE62162902690038C4FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51AE61162902690038C4FB /* main.m */; };
+		BE51AE66162902690038C4FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51AE65162902690038C4FB /* AppDelegate.m */; };
+		BE51AE68162902690038C4FB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE67162902690038C4FB /* Default.png */; };
+		BE51AE6A162902690038C4FB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE69162902690038C4FB /* Default@2x.png */; };
+		BE51AE6C162902690038C4FB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE6B162902690038C4FB /* Default-568h@2x.png */; };
+		BE51AE6F162902690038C4FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51AE6E162902690038C4FB /* ViewController.m */; };
+		BE51AE72162902690038C4FB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE70162902690038C4FB /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE51AE51162902690038C4FB /* FaceGuitar-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceGuitar-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE51AE55162902690038C4FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BE51AE57162902690038C4FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE51AE59162902690038C4FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BE51AE5D162902690038C4FB /* FaceGuitar-iPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FaceGuitar-iPhone-Info.plist"; sourceTree = "<group>"; };
+		BE51AE5F162902690038C4FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE51AE61162902690038C4FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE51AE63162902690038C4FB /* FaceGuitar-iPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceGuitar-iPhone-Prefix.pch"; sourceTree = "<group>"; };
+		BE51AE64162902690038C4FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE51AE65162902690038C4FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE51AE67162902690038C4FB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BE51AE69162902690038C4FB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BE51AE6B162902690038C4FB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BE51AE6D162902690038C4FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE51AE6E162902690038C4FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE51AE71162902690038C4FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE51AE4E162902690038C4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE51AE56162902690038C4FB /* UIKit.framework in Frameworks */,
+				BE51AE58162902690038C4FB /* Foundation.framework in Frameworks */,
+				BE51AE5A162902690038C4FB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE51AE46162902690038C4FB = {
+			isa = PBXGroup;
+			children = (
+				BE51AE5B162902690038C4FB /* FaceGuitar-iPhone */,
+				BE51AE54162902690038C4FB /* Frameworks */,
+				BE51AE52162902690038C4FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE51AE52162902690038C4FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE51AE51162902690038C4FB /* FaceGuitar-iPhone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE51AE54162902690038C4FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE51AE55162902690038C4FB /* UIKit.framework */,
+				BE51AE57162902690038C4FB /* Foundation.framework */,
+				BE51AE59162902690038C4FB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE51AE5B162902690038C4FB /* FaceGuitar-iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				BE51AE64162902690038C4FB /* AppDelegate.h */,
+				BE51AE65162902690038C4FB /* AppDelegate.m */,
+				BE51AE6D162902690038C4FB /* ViewController.h */,
+				BE51AE6E162902690038C4FB /* ViewController.m */,
+				BE51AE70162902690038C4FB /* ViewController.xib */,
+				BE51AE5C162902690038C4FB /* Supporting Files */,
+			);
+			path = "FaceGuitar-iPhone";
+			sourceTree = "<group>";
+		};
+		BE51AE5C162902690038C4FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE51AE5D162902690038C4FB /* FaceGuitar-iPhone-Info.plist */,
+				BE51AE5E162902690038C4FB /* InfoPlist.strings */,
+				BE51AE61162902690038C4FB /* main.m */,
+				BE51AE63162902690038C4FB /* FaceGuitar-iPhone-Prefix.pch */,
+				BE51AE67162902690038C4FB /* Default.png */,
+				BE51AE69162902690038C4FB /* Default@2x.png */,
+				BE51AE6B162902690038C4FB /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE51AE50162902690038C4FB /* FaceGuitar-iPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE51AE75162902690038C4FB /* Build configuration list for PBXNativeTarget "FaceGuitar-iPhone" */;
+			buildPhases = (
+				BE51AE4D162902690038C4FB /* Sources */,
+				BE51AE4E162902690038C4FB /* Frameworks */,
+				BE51AE4F162902690038C4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FaceGuitar-iPhone";
+			productName = "FaceGuitar-iPhone";
+			productReference = BE51AE51162902690038C4FB /* FaceGuitar-iPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE51AE48162902690038C4FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Stanford;
+			};
+			buildConfigurationList = BE51AE4B162902690038C4FB /* Build configuration list for PBXProject "FaceGuitar-iPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BE51AE46162902690038C4FB;
+			productRefGroup = BE51AE52162902690038C4FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE51AE50162902690038C4FB /* FaceGuitar-iPhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE51AE4F162902690038C4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE51AE60162902690038C4FB /* InfoPlist.strings in Resources */,
+				BE51AE68162902690038C4FB /* Default.png in Resources */,
+				BE51AE6A162902690038C4FB /* Default@2x.png in Resources */,
+				BE51AE6C162902690038C4FB /* Default-568h@2x.png in Resources */,
+				BE51AE72162902690038C4FB /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE51AE4D162902690038C4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE51AE62162902690038C4FB /* main.m in Sources */,
+				BE51AE66162902690038C4FB /* AppDelegate.m in Sources */,
+				BE51AE6F162902690038C4FB /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE51AE5E162902690038C4FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE51AE5F162902690038C4FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE51AE70162902690038C4FB /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE51AE71162902690038C4FB /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE51AE73162902690038C4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BE51AE74162902690038C4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE51AE76162902690038C4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceGuitar-iPhone/FaceGuitar-iPhone-Prefix.pch";
+				INFOPLIST_FILE = "FaceGuitar-iPhone/FaceGuitar-iPhone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BE51AE77162902690038C4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceGuitar-iPhone/FaceGuitar-iPhone-Prefix.pch";
+				INFOPLIST_FILE = "FaceGuitar-iPhone/FaceGuitar-iPhone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE51AE4B162902690038C4FB /* Build configuration list for PBXProject "FaceGuitar-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE51AE73162902690038C4FB /* Debug */,
+				BE51AE74162902690038C4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE51AE75162902690038C4FB /* Build configuration list for PBXNativeTarget "FaceGuitar-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE51AE76162902690038C4FB /* Debug */,
+				BE51AE77162902690038C4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE51AE48162902690038C4FB /* Project object */;
+}
