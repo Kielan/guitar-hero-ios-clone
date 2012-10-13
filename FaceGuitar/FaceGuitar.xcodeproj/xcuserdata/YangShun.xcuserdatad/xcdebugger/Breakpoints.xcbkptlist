@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FaceGuitar/PlayViewController.m"
-         timestampString = "371847928.02452"
+         timestampString = "371856873.962584"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "307"
-         endingLineNumber = "307"
+         startingLineNumber = "314"
+         endingLineNumber = "314"
          landmarkName = "-buttonPressedWithNumber:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FaceGuitar/PlayViewController.m"
-         timestampString = "371847928.02452"
+         timestampString = "371856873.962584"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "150"
-         endingLineNumber = "150"
+         startingLineNumber = "157"
+         endingLineNumber = "157"
          landmarkName = "-addFriend:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FaceGuitar/PlayViewController.m"
-         timestampString = "371847928.02452"
+         timestampString = "371856873.962584"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "149"
-         endingLineNumber = "149"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
          landmarkName = "-addFriend:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FaceGuitar/PlayViewController.m"
-         timestampString = "371847928.02452"
+         timestampString = "371856873.962584"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "148"
-         endingLineNumber = "148"
+         startingLineNumber = "155"
+         endingLineNumber = "155"
          landmarkName = "-addFriend:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FaceGuitar/PlayViewController.m"
-         timestampString = "371847928.02452"
+         timestampString = "371856873.962584"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "147"
-         endingLineNumber = "147"
+         startingLineNumber = "154"
+         endingLineNumber = "154"
          landmarkName = "-addFriend:"
          landmarkType = "5">
       </FileBreakpoint>
