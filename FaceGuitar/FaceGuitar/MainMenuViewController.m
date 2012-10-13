@@ -86,6 +86,11 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
                      }];
 }
 
+
+- (IBAction)startButton:(id)sender {
+    [self startGame:self];
+}
+
 - (void)shiftButtonsDown {
     
     self.hostGameBtn.center = CGPointMake(self.hostGameBtn.center.x, self.hostGameBtn.center.y + 500);
@@ -122,9 +127,9 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
 }
 -(void)updateLoginBtn{
     if ([[FacebookManager sharedInstance] isOpen]){
-        [loginBtn setTitle:@"Logout" forState:UIControlStateNormal];
+        [loginBtn setTitle:@"LOGOUT" forState:UIControlStateNormal];
     }else{
-    [loginBtn setTitle:@"Login" forState:UIControlStateNormal];
+    [loginBtn setTitle:@"LOGIN" forState:UIControlStateNormal];
     }
 }
 
