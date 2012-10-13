@@ -17,6 +17,7 @@ typedef enum {
 
 typedef enum {
     kIdle,
+    kInZone,
     kHit,
     kMiss,
     kExpire

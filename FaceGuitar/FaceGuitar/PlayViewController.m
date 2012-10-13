@@ -15,6 +15,8 @@
     Column *col4;
     NSTimer *updateTimer;
     int counter;
+    IBOutlet UILabel *hit;
+    IBOutlet UILabel *miss;
 }
 
 @end
@@ -60,13 +62,79 @@
     col4.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:col4];
 
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/30.0f
                                                    target:self
                                                  selector:@selector(updateColumns)
                                                  userInfo:nil
                                                   repeats:YES];
     [updateTimer fire];
     // Do any additional setup after loading the view from its nib.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateHitCount)
+                                                 name:@"hit"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateMissCount)
+                                                 name:@"miss"
+                                               object:nil];
+}
+
+- (IBAction)press:(id)sender {
+    int number = ((UIButton*)sender).tag;
+    switch (number) {
+        case 1:
+            if (col1.active) {
+                col1.currHitDot.state = kHit;
+                col1.currHitDot.backgroundColor = [UIColor orangeColor];
+                col1.active = NO;
+                [self updateHitCount];
+            } else {
+                [self updateMissCount];
+            }
+            break;
+        case 2:
+            if (col2.active) {
+                col2.currHitDot.state = kHit;
+                col2.currHitDot.backgroundColor = [UIColor orangeColor];
+                col2.active = NO;
+                [self updateHitCount];
+            } else {
+                [self updateMissCount];
+            }
+            break;
+        case 3:
+            if (col3.active) {
+                col3.currHitDot.state = kHit;
+                col3.currHitDot.backgroundColor = [UIColor orangeColor];
+                col3.active = NO;
+                [self updateHitCount];
+            } else {
+                [self updateMissCount];
+            }
+            break;
+        case 4:
+            if (col4.active) {
+                col4.currHitDot.state = kHit;
+                col4.currHitDot.backgroundColor = [UIColor orangeColor];
+                col4.active = NO;
+                [self updateHitCount];
+            } else {
+                [self updateMissCount];
+            }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)updateHitCount {
+    hit.text = [NSString stringWithFormat:@"%d", [hit.text intValue]+1];
+}
+
+- (void)updateMissCount {
+    miss.text = [NSString stringWithFormat:@"%d", [miss.text intValue]+1];
 }
 
 - (void)generateDots {
@@ -94,10 +162,10 @@
     [col2 update];
     [col3 update];
     [col4 update];
-    NSLog(@"col1: %d, col2: %d, col3: %d, col4: %d", col1.dotArray.count,
-                                                      col2.dotArray.count,
-                                                      col3.dotArray.count,
-                                                      col4.dotArray.count);
+    NSLog(@"col1: %d, col2: %d, col3: %d, col4: %d", col1.active,
+                                                      col2.active,
+                                                      col3.active,
+                                                      col4.active);
 }
 
 - (void)generateDotForCol1:(BOOL)one

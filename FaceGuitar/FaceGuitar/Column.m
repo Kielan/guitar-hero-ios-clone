@@ -16,6 +16,7 @@
     if (self) {
         NSLog(@"col init");
         self.dotArray = [[NSMutableArray alloc] init];
+        self.numGreen = 0;
     }
     return self;
 }
@@ -28,11 +29,20 @@
             dot.backgroundColor = [UIColor redColor];
             dot.state = kIdle;
         } else if (dot.center.y + 25 < 600) {
-            dot.backgroundColor = [UIColor greenColor];
-            dot.state = kHit;
+            self.currHitDot = dot;
+            if (dot.state == kIdle) {
+                dot.backgroundColor = [UIColor greenColor];
+                self.active = YES;
+                dot.state = kInZone;
+            }
         } else if (dot.center.y - 25 < 700) {
-            dot.backgroundColor = [UIColor blackColor];
-            dot.state = kMiss;
+            if (dot.state == kInZone) {
+                // this dot was missed!
+                self.active = NO;
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"miss" object:nil];
+                dot.backgroundColor = [UIColor blackColor];
+                dot.state = kMiss;
+            }
         } else {
             dot.state = kExpire;
             [dot removeFromSuperview];
@@ -53,6 +63,7 @@
     [self addSubview:dot];
     [self.dotArray addObject:dot];
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

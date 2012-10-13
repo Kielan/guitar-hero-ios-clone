@@ -14,6 +14,9 @@
 
 @property(nonatomic, strong) NSMutableArray* dotArray;
 @property(nonatomic) ColourType colour;
+@property(nonatomic) int numGreen;
+@property(nonatomic, strong) Dot *currHitDot;
+@property(nonatomic) BOOL active;
 
 - (void)addBlock;
 - (void)update;
