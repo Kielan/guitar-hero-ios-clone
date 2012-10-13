@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FaceGuitar/FaceGuitar.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:FaceGuitar-iPhone/FaceGuitar-iPhone.xcodeproj">
    </FileRef>
 </Workspace>

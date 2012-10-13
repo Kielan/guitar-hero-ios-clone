@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class ViewController;
+#import "TransitionController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, readonly, nonatomic) TransitionController *transitionController;
 
 @end

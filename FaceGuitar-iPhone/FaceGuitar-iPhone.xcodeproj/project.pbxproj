@@ -16,8 +16,15 @@
 		BE51AE68162902690038C4FB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE67162902690038C4FB /* Default.png */; };
 		BE51AE6A162902690038C4FB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE69162902690038C4FB /* Default@2x.png */; };
 		BE51AE6C162902690038C4FB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE6B162902690038C4FB /* Default-568h@2x.png */; };
-		BE51AE6F162902690038C4FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51AE6E162902690038C4FB /* ViewController.m */; };
-		BE51AE72162902690038C4FB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE70162902690038C4FB /* ViewController.xib */; };
+		BE51AE861629051E0038C4FB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51AE851629051E0038C4FB /* MainMenuViewController.m */; };
+		BE51AE88162905250038C4FB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE51AE87162905250038C4FB /* MainMenu.xib */; };
+		BE8E8A74162937620004EEE2 /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E8A73162937620004EEE2 /* TransitionController.m */; };
+		BE94273F16290EA100EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94273E16290EA100EF55A0 /* NetworkManager.m */; };
+		BE94274116290F0700EF55A0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94274016290F0700EF55A0 /* GameKit.framework */; };
+		BE9427451629118000EF55A0 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9427431629118000EF55A0 /* TapViewController.m */; };
+		BE94274A162911A200EF55A0 /* TunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE942748162911A100EF55A0 /* TunesViewController.m */; };
+		BE94274E162911CD00EF55A0 /* TapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE94274C162911CD00EF55A0 /* TapView.xib */; };
+		BE94274F162911CD00EF55A0 /* TunesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE94274D162911CD00EF55A0 /* TunesView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +41,20 @@
 		BE51AE67162902690038C4FB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BE51AE69162902690038C4FB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BE51AE6B162902690038C4FB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BE51AE6D162902690038C4FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BE51AE6E162902690038C4FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BE51AE71162902690038C4FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		BE51AE841629051E0038C4FB /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		BE51AE851629051E0038C4FB /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		BE51AE87162905250038C4FB /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		BE8E8A72162937620004EEE2 /* TransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionController.h; sourceTree = "<group>"; };
+		BE8E8A73162937620004EEE2 /* TransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionController.m; sourceTree = "<group>"; };
+		BE94273D16290EA100EF55A0 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		BE94273E16290EA100EF55A0 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		BE94274016290F0700EF55A0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		BE9427421629118000EF55A0 /* TapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapViewController.h; sourceTree = "<group>"; };
+		BE9427431629118000EF55A0 /* TapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapViewController.m; sourceTree = "<group>"; };
+		BE942747162911A100EF55A0 /* TunesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TunesViewController.h; sourceTree = "<group>"; };
+		BE942748162911A100EF55A0 /* TunesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TunesViewController.m; sourceTree = "<group>"; };
+		BE94274C162911CD00EF55A0 /* TapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TapView.xib; sourceTree = "<group>"; };
+		BE94274D162911CD00EF55A0 /* TunesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TunesView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE94274116290F0700EF55A0 /* GameKit.framework in Frameworks */,
 				BE51AE56162902690038C4FB /* UIKit.framework in Frameworks */,
 				BE51AE58162902690038C4FB /* Foundation.framework in Frameworks */,
 				BE51AE5A162902690038C4FB /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +92,7 @@
 		BE51AE54162902690038C4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE94274016290F0700EF55A0 /* GameKit.framework */,
 				BE51AE55162902690038C4FB /* UIKit.framework */,
 				BE51AE57162902690038C4FB /* Foundation.framework */,
 				BE51AE59162902690038C4FB /* CoreGraphics.framework */,
@@ -83,11 +103,13 @@
 		BE51AE5B162902690038C4FB /* FaceGuitar-iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				BE51AE7D162903EA0038C4FB /* Controllers */,
+				BE51AE7F162904070038C4FB /* Nibs */,
+				BE51AE7E162903FD0038C4FB /* Resources */,
 				BE51AE64162902690038C4FB /* AppDelegate.h */,
 				BE51AE65162902690038C4FB /* AppDelegate.m */,
-				BE51AE6D162902690038C4FB /* ViewController.h */,
-				BE51AE6E162902690038C4FB /* ViewController.m */,
-				BE51AE70162902690038C4FB /* ViewController.xib */,
+				BE94273D16290EA100EF55A0 /* NetworkManager.h */,
+				BE94273E16290EA100EF55A0 /* NetworkManager.m */,
 				BE51AE5C162902690038C4FB /* Supporting Files */,
 			);
 			path = "FaceGuitar-iPhone";
@@ -105,6 +127,38 @@
 				BE51AE6B162902690038C4FB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE51AE7D162903EA0038C4FB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE8E8A72162937620004EEE2 /* TransitionController.h */,
+				BE8E8A73162937620004EEE2 /* TransitionController.m */,
+				BE51AE841629051E0038C4FB /* MainMenuViewController.h */,
+				BE51AE851629051E0038C4FB /* MainMenuViewController.m */,
+				BE9427421629118000EF55A0 /* TapViewController.h */,
+				BE9427431629118000EF55A0 /* TapViewController.m */,
+				BE942747162911A100EF55A0 /* TunesViewController.h */,
+				BE942748162911A100EF55A0 /* TunesViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE51AE7E162903FD0038C4FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE51AE7F162904070038C4FB /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				BE51AE87162905250038C4FB /* MainMenu.xib */,
+				BE94274C162911CD00EF55A0 /* TapView.xib */,
+				BE94274D162911CD00EF55A0 /* TunesView.xib */,
+			);
+			path = Nibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +216,9 @@
 				BE51AE68162902690038C4FB /* Default.png in Resources */,
 				BE51AE6A162902690038C4FB /* Default@2x.png in Resources */,
 				BE51AE6C162902690038C4FB /* Default-568h@2x.png in Resources */,
-				BE51AE72162902690038C4FB /* ViewController.xib in Resources */,
+				BE51AE88162905250038C4FB /* MainMenu.xib in Resources */,
+				BE94274E162911CD00EF55A0 /* TapView.xib in Resources */,
+				BE94274F162911CD00EF55A0 /* TunesView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +231,11 @@
 			files = (
 				BE51AE62162902690038C4FB /* main.m in Sources */,
 				BE51AE66162902690038C4FB /* AppDelegate.m in Sources */,
-				BE51AE6F162902690038C4FB /* ViewController.m in Sources */,
+				BE51AE861629051E0038C4FB /* MainMenuViewController.m in Sources */,
+				BE94273F16290EA100EF55A0 /* NetworkManager.m in Sources */,
+				BE9427451629118000EF55A0 /* TapViewController.m in Sources */,
+				BE94274A162911A200EF55A0 /* TunesViewController.m in Sources */,
+				BE8E8A74162937620004EEE2 /* TransitionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +248,6 @@
 				BE51AE5F162902690038C4FB /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BE51AE70162902690038C4FB /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE51AE71162902690038C4FB /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -256,6 +308,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceGuitar-iPhone/FaceGuitar-iPhone-Prefix.pch";
 				INFOPLIST_FILE = "FaceGuitar-iPhone/FaceGuitar-iPhone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -267,6 +320,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceGuitar-iPhone/FaceGuitar-iPhone-Prefix.pch";
 				INFOPLIST_FILE = "FaceGuitar-iPhone/FaceGuitar-iPhone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -291,6 +345,7 @@
 				BE51AE77162902690038C4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

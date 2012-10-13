@@ -19,6 +19,11 @@
 		6DA47EA31628FE6200C9F127 /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EA11628FE6200C9F127 /* PlayViewController.xib */; };
 		6DA47EA7162900F400C9F127 /* FacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EA5162900F400C9F127 /* FacesViewController.m */; };
 		6DA47EA8162900F400C9F127 /* FacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA47EA6162900F400C9F127 /* FacesViewController.xib */; };
+		BE8E8A7816293C510004EEE2 /* Controllers.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E8A7716293C510004EEE2 /* Controllers.m */; };
+		BE9427571629159F00EF55A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9427551629159F00EF55A0 /* MainMenuViewController.m */; };
+		BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9427561629159F00EF55A0 /* MainMenuViewController.xib */; };
+		BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94275B1629188D00EF55A0 /* NetworkManager.m */; };
+		BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94275D162918A200EF55A0 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,14 @@
 		6DA47EA4162900F400C9F127 /* FacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacesViewController.h; sourceTree = "<group>"; };
 		6DA47EA5162900F400C9F127 /* FacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacesViewController.m; sourceTree = "<group>"; };
 		6DA47EA6162900F400C9F127 /* FacesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacesViewController.xib; sourceTree = "<group>"; };
+		BE8E8A7616293C510004EEE2 /* Controllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controllers.h; sourceTree = "<group>"; };
+		BE8E8A7716293C510004EEE2 /* Controllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controllers.m; sourceTree = "<group>"; };
+		BE9427541629159F00EF55A0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		BE9427551629159F00EF55A0 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		BE9427561629159F00EF55A0 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
+		BE94275A1629188D00EF55A0 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		BE94275B1629188D00EF55A0 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		BE94275D162918A200EF55A0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */,
 				6DA47E831628FD4400C9F127 /* UIKit.framework in Frameworks */,
 				6DA47E851628FD4400C9F127 /* Foundation.framework in Frameworks */,
 				6DA47E871628FD4400C9F127 /* CoreGraphics.framework in Frameworks */,
@@ -77,6 +91,7 @@
 		6DA47E811628FD4400C9F127 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE94275D162918A200EF55A0 /* GameKit.framework */,
 				6DA47E821628FD4400C9F127 /* UIKit.framework */,
 				6DA47E841628FD4400C9F127 /* Foundation.framework */,
 				6DA47E861628FD4400C9F127 /* CoreGraphics.framework */,
@@ -87,6 +102,9 @@
 		6DA47E881628FD4400C9F127 /* FaceGuitar */ = {
 			isa = PBXGroup;
 			children = (
+				BE9427541629159F00EF55A0 /* MainMenuViewController.h */,
+				BE9427551629159F00EF55A0 /* MainMenuViewController.m */,
+				BE9427561629159F00EF55A0 /* MainMenuViewController.xib */,
 				6DA47E911628FD4400C9F127 /* AppDelegate.h */,
 				6DA47E921628FD4400C9F127 /* AppDelegate.m */,
 				6DA47EA4162900F400C9F127 /* FacesViewController.h */,
@@ -99,6 +117,10 @@
 				6DA47EA01628FE6200C9F127 /* PlayViewController.m */,
 				6DA47EA11628FE6200C9F127 /* PlayViewController.xib */,
 				6DA47E891628FD4400C9F127 /* Supporting Files */,
+				BE94275A1629188D00EF55A0 /* NetworkManager.h */,
+				BE94275B1629188D00EF55A0 /* NetworkManager.m */,
+				BE8E8A7616293C510004EEE2 /* Controllers.h */,
+				BE8E8A7716293C510004EEE2 /* Controllers.m */,
 			);
 			path = FaceGuitar;
 			sourceTree = "<group>";
@@ -169,6 +191,7 @@
 				6DA47E991628FD4400C9F127 /* ViewController.xib in Resources */,
 				6DA47EA31628FE6200C9F127 /* PlayViewController.xib in Resources */,
 				6DA47EA8162900F400C9F127 /* FacesViewController.xib in Resources */,
+				BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +207,9 @@
 				6DA47E961628FD4400C9F127 /* ViewController.m in Sources */,
 				6DA47EA21628FE6200C9F127 /* PlayViewController.m in Sources */,
 				6DA47EA7162900F400C9F127 /* FacesViewController.m in Sources */,
+				BE9427571629159F00EF55A0 /* MainMenuViewController.m in Sources */,
+				BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */,
+				BE8E8A7816293C510004EEE2 /* Controllers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +327,7 @@
 				6DA47E9E1628FD4400C9F127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
