@@ -46,7 +46,7 @@
 		BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9427561629159F00EF55A0 /* MainMenuViewController.xib */; };
 		BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94275B1629188D00EF55A0 /* NetworkManager.m */; };
 		BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94275D162918A200EF55A0 /* GameKit.framework */; };
-		EFC0B99F162996950087B697 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFC0B99E162996950087B697 /* placeholder.gif */; };
+		BEF008441629CCDB001BD37A /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF31FA9162990C800074395 /* Friend.m */; };
 		EFC0B9CB16299A750087B697 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9CA16299A750087B697 /* MapKit.framework */; };
 		EFC0B9CD16299A7C0087B697 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9CC16299A7C0087B697 /* ImageIO.framework */; };
 		EFC0B9DF16299CFF0087B697 /* libSDWebImageARC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9DA16299CC20087B697 /* libSDWebImageARC.a */; };
@@ -56,7 +56,6 @@
 		EFF31F7A16296F3D00074395 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF31F7916296F3D00074395 /* FacebookSDK.framework */; };
 		EFF31F7F16296F7A00074395 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF31F7C16296F7A00074395 /* FacebookSDKResources.bundle */; };
 		EFF31F8016296F7A00074395 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF31F7D16296F7A00074395 /* FBUserSettingsViewResources.bundle */; };
-		EFF31FAA162990C800074395 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF31FA9162990C800074395 /* Friend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -421,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF008441629CCDB001BD37A /* Friend.m in Sources */,
 				6DA47E8F1628FD4400C9F127 /* main.m in Sources */,
 				6DA47E931628FD4400C9F127 /* AppDelegate.m in Sources */,
 				6DA47E961628FD4400C9F127 /* ViewController.m in Sources */,

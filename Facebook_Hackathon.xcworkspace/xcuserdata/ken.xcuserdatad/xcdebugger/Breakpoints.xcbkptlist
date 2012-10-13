@@ -13,7 +13,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "174"
          endingLineNumber = "174"
-         landmarkName = "-session:peer:didChangeState:"
+         landmarkName = "-hostGame:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
