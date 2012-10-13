@@ -47,6 +47,10 @@
 		BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94275B1629188D00EF55A0 /* NetworkManager.m */; };
 		BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94275D162918A200EF55A0 /* GameKit.framework */; };
 		BEF008441629CCDB001BD37A /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF31FA9162990C800074395 /* Friend.m */; };
+		BEF008471629D202001BD37A /* SongPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF008461629D202001BD37A /* SongPickerViewController.m */; };
+		BEF0084A1629D236001BD37A /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF008491629D236001BD37A /* Song.m */; };
+		BEF0084E1629D253001BD37A /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0084C1629D253001BD37A /* SongViewController.m */; };
+		BEF0084F1629D253001BD37A /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEF0084D1629D253001BD37A /* SongViewController.xib */; };
 		EFC0B9CB16299A750087B697 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9CA16299A750087B697 /* MapKit.framework */; };
 		EFC0B9CD16299A7C0087B697 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9CC16299A7C0087B697 /* ImageIO.framework */; };
 		EFC0B9DF16299CFF0087B697 /* libSDWebImageARC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0B9DA16299CC20087B697 /* libSDWebImageARC.a */; };
@@ -145,6 +149,13 @@
 		BE94275A1629188D00EF55A0 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		BE94275B1629188D00EF55A0 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		BE94275D162918A200EF55A0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		BEF008451629D202001BD37A /* SongPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPickerViewController.h; sourceTree = "<group>"; };
+		BEF008461629D202001BD37A /* SongPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPickerViewController.m; sourceTree = "<group>"; };
+		BEF008481629D236001BD37A /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		BEF008491629D236001BD37A /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		BEF0084B1629D253001BD37A /* SongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
+		BEF0084C1629D253001BD37A /* SongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
+		BEF0084D1629D253001BD37A /* SongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongViewController.xib; sourceTree = "<group>"; };
 		EFC0B99E162996950087B697 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = placeholder.gif; sourceTree = "<group>"; };
 		EFC0B9CA16299A750087B697 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EFC0B9CC16299A7C0087B697 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -249,13 +260,20 @@
 				6DA47EAE162903D800C9F127 /* Column.m */,
 				6DA47EB61629166200C9F127 /* Dot.h */,
 				6DA47EB71629166300C9F127 /* Dot.m */,
-				6DA47E891628FD4400C9F127 /* Supporting Files */,
-				BE94275A1629188D00EF55A0 /* NetworkManager.h */,
-				BE94275B1629188D00EF55A0 /* NetworkManager.m */,
 				BE8E8A7616293C510004EEE2 /* Controllers.h */,
 				BE8E8A7716293C510004EEE2 /* Controllers.m */,
 				EFF31FA8162990C800074395 /* Friend.h */,
 				EFF31FA9162990C800074395 /* Friend.m */,
+				BEF008451629D202001BD37A /* SongPickerViewController.h */,
+				BEF008461629D202001BD37A /* SongPickerViewController.m */,
+				BEF008481629D236001BD37A /* Song.h */,
+				BEF008491629D236001BD37A /* Song.m */,
+				BE94275A1629188D00EF55A0 /* NetworkManager.h */,
+				BE94275B1629188D00EF55A0 /* NetworkManager.m */,
+				BEF0084B1629D253001BD37A /* SongViewController.h */,
+				BEF0084C1629D253001BD37A /* SongViewController.m */,
+				BEF0084D1629D253001BD37A /* SongViewController.xib */,
+				6DA47E891628FD4400C9F127 /* Supporting Files */,
 			);
 			path = FaceGuitar;
 			sourceTree = "<group>";
@@ -410,6 +428,7 @@
 				6DA47EED16297E5400C9F127 /* red-dot@2x.png in Resources */,
 				6DA47EEE16297E5400C9F127 /* yellow-dot@2x.png in Resources */,
 				6DA47EF3162983CE00C9F127 /* gray-dot@2x.png in Resources */,
+				BEF0084F1629D253001BD37A /* SongViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +453,9 @@
 				6DA47EBB16291C8200C9F127 /* FacebookManager.m in Sources */,
 				BE8E8A84162950D60004EEE2 /* TransitionController.m in Sources */,
 				6DA47EF116297ED300C9F127 /* ImagesManager.m in Sources */,
+				BEF008471629D202001BD37A /* SongPickerViewController.m in Sources */,
+				BEF0084A1629D236001BD37A /* Song.m in Sources */,
+				BEF0084E1629D253001BD37A /* SongViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

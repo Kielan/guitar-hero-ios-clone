@@ -12,6 +12,7 @@
 #import "PlayViewController.h"
 #import "AppDelegate.h"
 #import "FacebookManager.h"
+#import "Song.h"
 
 typedef enum { kNetworkDisconnected, kNetworkConnecting, kNetworkConnected } NetworkStatus;
 
@@ -79,6 +80,7 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
                                               self.hostGameBtn.center = CGPointMake(self.hostGameBtn.center.x, self.hostGameBtn.center.y - 500);
                                           }
                                           completion:^(BOOL finished){
+                                              [self startGame:self];
                                           }];
                      }];
 }
@@ -247,7 +249,7 @@ static NSString * const FaceGuitarGKSessionID = @"FaceGuitar";
     networkManager.gkSession.delegate = nil;
     
     PlayViewController  *playController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
-    playController.map = gangnam;
+    playController.song = [Song gangnamSong];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     [appDelegate.transitionController transitionToViewController:playController withOptions:UIViewAnimationTransitionCurlUp];
 }

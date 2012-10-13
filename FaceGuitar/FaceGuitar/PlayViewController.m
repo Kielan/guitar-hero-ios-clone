@@ -28,7 +28,7 @@
 
 @implementation PlayViewController
 
-@synthesize map = _map;
+@synthesize song = _song;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,7 +74,7 @@
     col4.colour = kYellow;
     [self.view addSubview:col4];
     
-    NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"gangnam" ofType:@"mp3"]];
+    NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:self.song.mp3File ofType:@"mp3"]];
     
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:nil];
     [audioPlayer prepareToPlay];
@@ -166,7 +166,7 @@
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     PlayViewController *viewController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
-    viewController.map = gangnam;
+    viewController.song = [Song gangnamSong];
     [appDelegate.transitionController transitionToViewController:viewController withOptions:UIViewAnimationTransitionFlipFromLeft];
 }
 
@@ -183,7 +183,7 @@
 //    if (arc4random() % 3 == 0) {
 //        [col4 addBlock];
 //    }
-    if (rowId >= self.map.count)
+    if (rowId >= self.song.notes.count)
     {
         [updateTimer invalidate];
         [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -198,7 +198,7 @@
     else
     {
         int row[4];
-        int n = [[self.map objectAtIndex:rowId] intValue];
+        int n = [[self.song.notes objectAtIndex:rowId] intValue];
         
         for (int i = 3; i >= 0; i--)
         {
