@@ -11,6 +11,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AppDelegate.h"
 #import "ImagesManager.h"
+#import "FacebookManager.h"
+#import "Friend.h"
 
 static ImagesManager *imagesManager;
 
@@ -24,8 +26,11 @@ static ImagesManager *imagesManager;
     IBOutlet UILabel *hit;
     IBOutlet UILabel *miss;
     IBOutlet UIImageView *btmBar;
+    IBOutlet UIScrollView *scrollView;
+    NSMutableArray *friends;
     int rowId;
     AVAudioPlayer* audioPlayer;
+    int friendIndex;
 }
 
 - (IBAction)restart:(id)sender;
@@ -48,6 +53,9 @@ static ImagesManager *imagesManager;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    friends = [FacebookManager sharedInstance].friendsArray;
+    friendIndex = 0;
     
     imagesManager = [ImagesManager sharedImagesManager];
     rowId = 0;
@@ -97,6 +105,11 @@ static ImagesManager *imagesManager;
                                                  name:@"miss"
                                                object:nil];
     [self startGame];
+}
+
+- (IBAction)addFriend:(id)sender {
+    Friend *friend = friends[friendIndex++];
+    NSLog(@"%@ came to watch your performance.", friend.name);
 }
 
 - (void)startGame {
