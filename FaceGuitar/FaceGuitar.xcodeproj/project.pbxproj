@@ -24,6 +24,9 @@
 		BE9427581629159F00EF55A0 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9427561629159F00EF55A0 /* MainMenuViewController.xib */; };
 		BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE94275B1629188D00EF55A0 /* NetworkManager.m */; };
 		BE94275E162918A200EF55A0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94275D162918A200EF55A0 /* GameKit.framework */; };
+		6DA47EAF162903D800C9F127 /* Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EAE162903D800C9F127 /* Column.m */; };
+		6DA47EB81629166300C9F127 /* Dot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EB71629166300C9F127 /* Dot.m */; };
+		6DA47EBB16291C8200C9F127 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA47EBA16291C8200C9F127 /* FacebookManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,13 @@
 		BE94275A1629188D00EF55A0 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		BE94275B1629188D00EF55A0 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		BE94275D162918A200EF55A0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		6DA47EAD162903D800C9F127 /* Column.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Column.h; sourceTree = "<group>"; };
+		6DA47EAE162903D800C9F127 /* Column.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Column.m; sourceTree = "<group>"; };
+		6DA47EB11629072300C9F127 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6DA47EB61629166200C9F127 /* Dot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dot.h; sourceTree = "<group>"; };
+		6DA47EB71629166300C9F127 /* Dot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dot.m; sourceTree = "<group>"; };
+		6DA47EB916291C8100C9F127 /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
+		6DA47EBA16291C8200C9F127 /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,15 +117,22 @@
 				BE9427561629159F00EF55A0 /* MainMenuViewController.xib */,
 				6DA47E911628FD4400C9F127 /* AppDelegate.h */,
 				6DA47E921628FD4400C9F127 /* AppDelegate.m */,
+				6DA47EB11629072300C9F127 /* Constants.h */,
 				6DA47EA4162900F400C9F127 /* FacesViewController.h */,
 				6DA47EA5162900F400C9F127 /* FacesViewController.m */,
 				6DA47EA6162900F400C9F127 /* FacesViewController.xib */,
+				6DA47EB916291C8100C9F127 /* FacebookManager.h */,
+				6DA47EBA16291C8200C9F127 /* FacebookManager.m */,
 				6DA47E941628FD4400C9F127 /* ViewController.h */,
 				6DA47E951628FD4400C9F127 /* ViewController.m */,
 				6DA47E971628FD4400C9F127 /* ViewController.xib */,
 				6DA47E9F1628FE6200C9F127 /* PlayViewController.h */,
 				6DA47EA01628FE6200C9F127 /* PlayViewController.m */,
 				6DA47EA11628FE6200C9F127 /* PlayViewController.xib */,
+				6DA47EAD162903D800C9F127 /* Column.h */,
+				6DA47EAE162903D800C9F127 /* Column.m */,
+				6DA47EB61629166200C9F127 /* Dot.h */,
+				6DA47EB71629166300C9F127 /* Dot.m */,
 				6DA47E891628FD4400C9F127 /* Supporting Files */,
 				BE94275A1629188D00EF55A0 /* NetworkManager.h */,
 				BE94275B1629188D00EF55A0 /* NetworkManager.m */,
@@ -210,6 +227,9 @@
 				BE9427571629159F00EF55A0 /* MainMenuViewController.m in Sources */,
 				BE94275C1629188D00EF55A0 /* NetworkManager.m in Sources */,
 				BE8E8A7816293C510004EEE2 /* Controllers.m in Sources */,
+				6DA47EAF162903D800C9F127 /* Column.m in Sources */,
+				6DA47EB81629166300C9F127 /* Dot.m in Sources */,
+				6DA47EBB16291C8200C9F127 /* FacebookManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

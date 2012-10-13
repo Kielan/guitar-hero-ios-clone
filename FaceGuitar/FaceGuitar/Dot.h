@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  Dot.h
 //  FaceGuitar
 //
 //  Created by YangShun on 12/10/12.
@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PlayViewController.h"
+#import "Constants.h"
 
-@interface ViewController : UIViewController
+@interface Dot : UIImageView
+
+@property (nonatomic) DotState state;
 
 @end
