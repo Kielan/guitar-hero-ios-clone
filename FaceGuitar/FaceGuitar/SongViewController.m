@@ -43,9 +43,9 @@
 //    self.songNameLabel.text = self.song.name;
 //    self.songImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.song.name]];
     
-    [self.songButton setTitle:self.song.name forState:UIControlStateNormal];
-    [self.songButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.song.name]] forState:UIControlStateNormal];
-    
+    //[self.songButton setTitle:self.song.name forState:UIControlStateNormal];
+//    [self.songButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"song-%@", self.song.mp3File]] forState:UIControlStateNormal];
+    [self.songButton setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"song-%@", self.song.mp3File]] forState:UIControlStateNormal];
     [self.songButton addTarget:self action:@selector(songSelected) forControlEvents:UIControlEventTouchUpInside];
 }
 

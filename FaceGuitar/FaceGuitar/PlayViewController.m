@@ -27,6 +27,8 @@ static ImagesManager *imagesManager;
     AVAudioPlayer* audioPlayer;
 }
 
+- (IBAction)restart:(id)sender;
+
 @end
 
 @implementation PlayViewController
@@ -299,10 +301,7 @@ static ImagesManager *imagesManager;
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    PlayViewController *viewController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
-    viewController.song = self.song;
-    [appDelegate.transitionController transitionToViewController:viewController withOptions:UIViewAnimationTransitionFlipFromLeft];
+    [self restart:self];
 }
 
 - (void)generateDots {
@@ -400,7 +399,13 @@ static ImagesManager *imagesManager;
 }
 
 - (IBAction)restart:(id)sender {
+    [updateTimer invalidate];
+    [audioPlayer stop];
     
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    PlayViewController *viewController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
+    viewController.song = self.song;
+    [appDelegate.transitionController transitionToViewController:viewController withOptions:UIViewAnimationTransitionFlipFromLeft];
 }
 
 - (void)viewDidUnload
