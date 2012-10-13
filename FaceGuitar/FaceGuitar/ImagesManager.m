@@ -19,6 +19,9 @@ static ImagesManager *_sharedImagesManager;
 @synthesize greenDot;
 @synthesize yellowDot;
 @synthesize grayDot;
+@synthesize hitText;
+@synthesize goodText;
+@synthesize greatText;
 
 + (ImagesManager *)sharedImagesManager {
     if (!_sharedImagesManager) {
@@ -35,6 +38,9 @@ static ImagesManager *_sharedImagesManager;
         self.greenDot = [UIImage imageNamed:@"green-dot@2x.png"];
         self.yellowDot = [UIImage imageNamed:@"yellow-dot@2x.png"];
         self.grayDot = [UIImage imageNamed:@"gray-dot@2x.png"];
+        self.hitText = [UIImage imageNamed:@"text-hit@2x.png"];
+        self.goodText = [UIImage imageNamed:@"text-good@2x.png"];
+        self.greatText = [UIImage imageNamed:@"text-great@2x.png"];
     }
     return self;
 }

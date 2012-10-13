@@ -13,6 +13,9 @@
 		6D0F884E1629DC4700FD5EB2 /* song-callmemaybe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F884B1629DC4700FD5EB2 /* song-callmemaybe@2x.png */; };
 		6D0F884F1629DC4700FD5EB2 /* song-gangnam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F884C1629DC4700FD5EB2 /* song-gangnam@2x.png */; };
 		6D0F88501629DC4700FD5EB2 /* song-starships@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F884D1629DC4700FD5EB2 /* song-starships@2x.png */; };
+		6D0F88541629DF5900FD5EB2 /* text-hit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F88511629DF5900FD5EB2 /* text-hit@2x.png */; };
+		6D0F88551629DF5900FD5EB2 /* text-great@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F88521629DF5900FD5EB2 /* text-great@2x.png */; };
+		6D0F88561629DF5900FD5EB2 /* text-good@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F88531629DF5900FD5EB2 /* text-good@2x.png */; };
 		6DA47E831628FD4400C9F127 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA47E821628FD4400C9F127 /* UIKit.framework */; };
 		6DA47E851628FD4400C9F127 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA47E841628FD4400C9F127 /* Foundation.framework */; };
 		6DA47E871628FD4400C9F127 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA47E861628FD4400C9F127 /* CoreGraphics.framework */; };
@@ -106,6 +109,9 @@
 		6D0F884B1629DC4700FD5EB2 /* song-callmemaybe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "song-callmemaybe@2x.png"; sourceTree = "<group>"; };
 		6D0F884C1629DC4700FD5EB2 /* song-gangnam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "song-gangnam@2x.png"; sourceTree = "<group>"; };
 		6D0F884D1629DC4700FD5EB2 /* song-starships@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "song-starships@2x.png"; sourceTree = "<group>"; };
+		6D0F88511629DF5900FD5EB2 /* text-hit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-hit@2x.png"; sourceTree = "<group>"; };
+		6D0F88521629DF5900FD5EB2 /* text-great@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-great@2x.png"; sourceTree = "<group>"; };
+		6D0F88531629DF5900FD5EB2 /* text-good@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-good@2x.png"; sourceTree = "<group>"; };
 		6DA47E7E1628FD4400C9F127 /* FaceGuitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceGuitar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA47E821628FD4400C9F127 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6DA47E841628FD4400C9F127 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -323,6 +329,9 @@
 				BE164FFB1629703B008A5BCD /* guitarguy-on@2x.png */,
 				6DA47EE416297A1E00C9F127 /* play-background@2x.png */,
 				BE164FFC1629703B008A5BCD /* logo@2x.png */,
+				6D0F88511629DF5900FD5EB2 /* text-hit@2x.png */,
+				6D0F88521629DF5900FD5EB2 /* text-great@2x.png */,
+				6D0F88531629DF5900FD5EB2 /* text-good@2x.png */,
 				BE8E8A89162966740004EEE2 /* gangnam.mp3 */,
 				6D0F884B1629DC4700FD5EB2 /* song-callmemaybe@2x.png */,
 				6D0F884C1629DC4700FD5EB2 /* song-gangnam@2x.png */,
@@ -453,6 +462,9 @@
 				6D0F884E1629DC4700FD5EB2 /* song-callmemaybe@2x.png in Resources */,
 				6D0F884F1629DC4700FD5EB2 /* song-gangnam@2x.png in Resources */,
 				6D0F88501629DC4700FD5EB2 /* song-starships@2x.png in Resources */,
+				6D0F88541629DF5900FD5EB2 /* text-hit@2x.png in Resources */,
+				6D0F88551629DF5900FD5EB2 /* text-great@2x.png in Resources */,
+				6D0F88561629DF5900FD5EB2 /* text-good@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
