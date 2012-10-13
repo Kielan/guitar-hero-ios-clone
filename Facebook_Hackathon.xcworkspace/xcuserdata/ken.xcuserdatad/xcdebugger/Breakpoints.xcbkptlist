@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FaceGuitar/FaceGuitar/MainMenuViewController.m"
-         timestampString = "371840297.334962"
+         timestampString = "371841877.332722"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "176"
-         endingLineNumber = "176"
-         landmarkName = "-hostGame:"
+         startingLineNumber = "177"
+         endingLineNumber = "177"
+         landmarkName = "-setNetworkStatus:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -21,12 +21,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FaceGuitar/FaceGuitar/MainMenuViewController.m"
-         timestampString = "371840297.334962"
+         timestampString = "371841877.332722"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "150"
-         endingLineNumber = "150"
+         startingLineNumber = "151"
+         endingLineNumber = "151"
          landmarkName = "-setNetworkStatus:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FaceGuitar/FaceGuitar/SongPickerViewController.m"
+         timestampString = "371843746.584671"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
+         landmarkName = "-songControllerDidGetSelected:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

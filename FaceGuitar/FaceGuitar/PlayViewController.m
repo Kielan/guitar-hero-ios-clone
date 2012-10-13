@@ -166,7 +166,7 @@
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     PlayViewController *viewController = [[PlayViewController alloc] initWithNibName:@"PlayViewController" bundle:nil];
-    viewController.song = [Song gangnamSong];
+    viewController.song = self.song;
     [appDelegate.transitionController transitionToViewController:viewController withOptions:UIViewAnimationTransitionFlipFromLeft];
 }
 

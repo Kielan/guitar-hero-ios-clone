@@ -20,6 +20,11 @@
 
 @synthesize name = _name, notes =  _notes, mp3File = _mp3File, highScore = _highScore;
 
++ (NSArray *)songs
+{
+    return [NSArray arrayWithObjects:[Song gangnamSong], nil];
+}
+
 + (Song *)gangnamSong
 {
     return [[Song alloc] initWithName:@"Gangnam Style" notes:[NSArray arrayWithObjects:
@@ -33,7 +38,8 @@
             @"1000",@"0100",@"0100",@"0001",@"1000",@"0010",@"0100",@"1000",
             @"1100",@"1100",@"1100",@"1100",@"0011",@"0011",@"0011",@"0011",
             @"1000",@"0100",@"0100",@"0001",@"0110",@"0110",@"1110",@"1110",
-            @"0000",@"0000",@"0000",@"0000",@"1111",@"0000",@"0000",@"0000",nil] mp3File:@"gangnam"];
+            @"0000",@"0000",@"0000",@"0000",@"1111",@"0000",@"0000",@"0000",
+            @"0000",@"0000",@"0000",@"0000",@"0000",@"0000",@"0000",@"0000",nil] mp3File:@"gangnam"];
 }
 
 - (id)initWithName:(NSString *)name notes:(NSArray *)notes mp3File:(NSString *)mp3File

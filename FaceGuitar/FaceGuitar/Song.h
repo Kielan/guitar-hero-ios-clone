@@ -16,6 +16,7 @@
 
 @property (nonatomic, assign) NSUInteger highScore;
 
++ (NSArray *)songs;
 + (Song *)gangnamSong;
 
 - (id)initWithName:(NSString *)name notes:(NSArray *)notes mp3File:(NSString *)mp3File;
